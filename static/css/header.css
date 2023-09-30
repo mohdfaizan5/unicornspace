@@ -1,0 +1,50 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  align-items: center;
+  font-size: 20px;
+  
+}
+
+header div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img{
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #1e3a2b;
+  
+}
+
+header h2{
+  display: inline-block;
+  font-family: 'Faro-semiLucky';
+  font-weight: 500;
+  color: #1e3a2b;
+}
+
+nav{
+  display: flex;
+  gap: 15px;
+}
+
+nav a{
+  font-family: 'Inter-medium';
+  word-spacing: -1px;
+  text-decoration: none;
+  color: #000000;
+}
+
+nav a:hover{
+  text-decoration: 3px underline #c2d0ef;
+  transition: all .5s;
+  
+}
+
+header button{
+  font-size: 20px;
+}
