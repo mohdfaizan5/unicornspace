@@ -48,3 +48,38 @@ nav a:hover{
 header button{
   font-size: 20px;
 }
+
+
+/* Responsive Design */
+@media (max-width: 425px) {
+
+  nav{
+    display: none;
+  }
+  .actionBtn{
+    display: none;
+  }
+  .btn1{
+    /* padding: 20px 28px; */
+  }
+  /* header h2{
+    font
+  } */
+
+
+  main{
+    padding: 0px 24px;
+  }
+
+  .home h1{
+    font-size: 44px;
+    line-height: 44px;
+    margin-top: 0;
+    width: auto;
+  }
+  .home h3{
+    font-size: 18px;
+    line-height: 18px;
+
+  }
+}

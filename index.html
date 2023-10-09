@@ -13,6 +13,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/header.css">
+  <link rel="stylesheet" href="static/css/pricing.css">
 
   <!-- JS -->
   <script src="static/js/main.js" defer></script>
@@ -23,6 +24,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="static/assets/favicons/site.webmanifest">
 
+  <!-- mojs animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 </head>
 
 
@@ -37,34 +40,114 @@
     <nav>
       <a href="">What We Do</a>
       <a href="">Testimonials</a>
-      <a href="">Pricing</a>
+      <a href="#pricing_section_container">Pricing</a>
       <a href="">How it Works</a>
       <a href="">FAQ</a>
     </nav>
 
-    <div>
+    <div class="actionBtn">
       <button class="btn1 btn2">Get started</button>
     </div>
   </header>
 
+
+  <div class="loader-wrapper">
+    <span class="loader">
+      <img src="static/assets/favicons/android-chrome-512x512.png" alt="">
+      <h2>Unicorns Space</h2>
+    </span>
+  </div>
   <main>
     <section class="home">
 
       <h1>Unlock effortless Business growth with our world-class Technical and Marketing team.</h1>
-      
+
       <h3 class="home_subdescription">
-        Access the strategies and talent powering the biggest business, startups and achieve your goals, faster.
+        Access the strategies and talent powering the biggest businesses🔥, startups🚀 and achieve your goals, faster.
       </h3>
-      
+
       <div>
         <button class="btn1 btn3">I want to grow!!</button>
       </div>
 
     </section>
-      
+
+    <section class="pricing_section_container" id="pricing_section_container">
+      <h1 class="">Get a package for your needs, starting at $499 only.</h1>
+
+      <section class="pricing_section">
+        <section>
+          <div>
+            <h1>Idea to Product</h1>
+            <h1 class="price">$499/pro</h1>
+          </div>
+
+          <h2>Everything for starting a business from scratch</h2>
+
+          <p>Get full-time access to our editors for 40 hours per week. One video request at a time. Includes thumbnail
+            design for each video we edit.</p>
+
+          <ul>
+            <li>Idea Validation.</li>
+            <li class="sub">Market research.</li>
+            <li>Product Design.</li>
+            <li class="sub">Brand Colors && Logo.</li>
+            <li>Optimized Landing Page For your product.</li>
+            <li class="sub">SEO</li>
+            <li class="sub">Mobile Responsive</li>
+            <li>Brand Identity.</li>
+            <li>No Contracts</li>
+            <li>Pause or Cancel Anytime</li>
+          </ul>
+          <h3>Get connected now for as soon as possible.</h3>
+
+          <button class="btn1 btn2">Get Started</button>
+        </section>
+        <section>
+          <div>
+            <h1>Product to Profits</h1>
+            <h1 class="price">$899/pro</h1>
+          </div>
+
+          <h2>Everything for starting a business from scratch</h2>
+
+          <p>Get full-time access to our editors for 40 hours per week. One video request at a time. Includes thumbnail
+            design for each video we edit.</p>
+
+          <ul>
+            <li>Optimizing existing product.</li>
+            <li class="sub">Market research.</li>
+            <li>Product Design.</li>
+            <li class="sub">Brand Colors && Logo.</li>
+            <li>Optimized Landing Page For your product.</li>
+            <li class="sub">SEO</li>
+            <li class="sub">Mobile Responsive</li>
+            <li>Brand Identity.</li>
+            <li>No Contracts</li>
+            <li>Pause or Cancel Anytime</li>
+          </ul>
+          <h3>Contact team for custom plans.</h3>
+
+          <button class="btn1 btn2">Get Started</button>
+        </section>
+      </section>
+    </section>
+
+
 
 
   </main>
+  <section class="cta_popup_container">
+    <div>
+      <img src="static/assets/favicons/android-chrome-192x192.png" alt="">
+      Get Started with an intro calling
+    </div>
+    <div>
+      <button class="btn1 btn2" id="CTApopupBtn1">View Pricing </button>
+      <button class="btn1 btn4" id="CTApopupBtn2">Get Started </button>
+    </div>
+  </section>
+
 
   <footer>
 

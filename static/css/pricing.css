@@ -1,0 +1,87 @@
+.pricing_section_container {
+  background-color: #1e3a2b;
+  color: #f8f4f0;
+  padding: 40px 40px;
+  margin: 20px;
+  border-radius: 24px;
+}
+
+.pricing_section {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 100px;
+}
+
+.pricing_section_container h1 {
+  margin: 0;
+}
+
+
+
+/* Pricing section */
+.pricing_section section {
+  background-color: #f8f4f0;
+  color: #1e3a2b;
+  width: 50%;
+  height: 750px;
+  padding: 48px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.pricing_section section div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing_section section h1 {
+  font-family: 'Faro-semiLucky';
+  font-size: 48px;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.pricing_section .price {
+  font-family: 'Inter-semibold';
+  font-size: 26px;
+ text-decoration: none;
+}
+
+
+.pricing_section section h2 {
+  font-size: 32px;
+  color: #1e3a2b;
+}
+
+.pricing_section section p {
+  font-size: 20px;
+  color: #1e3a2b;
+}
+
+.pricing_section section ul {
+  margin-left: 30px;
+  list-style-image: radial-gradient(#cfdcff);
+
+}
+
+.pricing_section section li {
+  font-family: 'Inter-medium';
+  font-size: 20px;
+
+  font-weight: 500;
+}
+
+.pricing_section li.sub{
+  margin-left: 50px;
+}
+
+
+
+.pricing_section section li::marker {
+  background-color: #cfdcff;
+}
+
