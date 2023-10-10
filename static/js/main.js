@@ -12,8 +12,16 @@
 
 // }
 
+gsap.to('.loader-wrapper img', {
+  // x: 100,
+  rotate: 360,
+  repeat: -1,
+  duration: 1
+})
+
 
 window.addEventListener('load', () => {
+  
   document.querySelector('.loader-wrapper').style.display = 'none'
 
 
@@ -36,3 +44,18 @@ window.addEventListener('load', () => {
 })
 
 
+// cta_popup_container scroll animation
+
+let cta_popup_container = document.querySelector('.cta_popup_container')
+let oldScrollY = window.scrollY;
+let directionText = document.getElementById('direction');
+window.onscroll = function (e) {
+  if (oldScrollY < window.scrollY) {
+    console.log(" Down")
+    cta_popup_container.classList.toggle('slideDown')
+  } else {
+    console.log("up")
+    cta_popup_container.classList.toggle('slideUp')
+  }
+  oldScrollY = window.scrollY;
+}

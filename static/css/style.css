@@ -124,12 +124,23 @@ main h1 {
   width: 900px;
   border-radius: 999px;
   border: 4px solid #1e3a2b;
+  background-color: #f8f4f0;
   font-size: 24px;
-
+  position: fixed;
+  z-index: 2;
+  bottom: 10px;
+  /* right: 30%; */
+  left: 15%;
+  transition: all 1s ease;
+  /* bottom: calc(100vh - 20%);
+  left: 50%;
+  right: 50%; */
+  
 }
 
 .cta_popup_container div {
   display: flex;
+  background-color: #f8f4f0;
   align-items: center;
   gap: 2px;
 }
@@ -146,6 +157,17 @@ main h1 {
 
 }
 
+.slideDown{
+  transform: translateY(-20px);
+  
+}
+
+.slideUp{
+  transform: translateY(100px);
+  /* transition: all 1s ease; */
+
+}
+
 /* #CTApopupBtn1, #CTApopupBtn2{
   
 } */
@@ -153,7 +175,8 @@ main h1 {
 .loader-wrapper{
   height: 100vh;
   width: 100%;
-  background-color: #222222;
+  background-color: #1e3a2b;
+  color: #f8f4f0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -162,12 +185,28 @@ main h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+}
+
+.loader-wrapper .loader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 
 .loader-wrapper img{
   width: 50px;
 }
 
+.loader-wrapper h2{
+
+  color: #f8f4f0;
+  font-size: 18px;
+  font-family: 'Faro';
+  font-weight: 400;
+}
 
 /* Loading page animation */
 
