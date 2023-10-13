@@ -1,27 +1,5 @@
-@font-face {
-  font-family: 'Faro';
-  src: url(../assets/fonts/Faro-SemiBoldSad.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@400;500;700&family=Inter:wght@300;500;600;700&display=swap');
 
-@font-face {
-  font-family: 'Faro-semiLucky';
-  src: url(../assets/fonts/Faro-SemiBoldLucky.ttf);
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url(../assets/fonts/inter/Inter-ExtraLight.ttf);
-}
-
-@font-face {
-  font-family: 'Inter-semibold';
-  src: url(../assets/fonts/inter/Inter-SemiBold.ttf);
-}
-
-@font-face {
-  font-family: 'Inter-medium';
-  src: url(../assets/fonts/inter/Inter-Medium.ttf);
-}
 
 * {
   padding: 0px;
@@ -33,6 +11,7 @@ body {
   background-color: #f8f4f0;
   color: #1e3a2b;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* header button */
@@ -194,4 +173,41 @@ form {
   margin-left: -16px;
   /* font-weight: 700; */
   font-size: 16px;
+}
+
+/* Progress bar */
+
+#progress-bar {
+  /* creating variable - named progress*/
+  --progress: 0;
+
+  width: var(--progress);
+
+
+  height: 6px;
+  border-bottom: solid 2px #252525;
+  position: fixed;
+  top: 90px;
+  left: 0;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  align-items: center;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 96%;
+  background-color: #f8f4f0;
+  height: 40px;
+
+}
+
+main {
+  margin-top: 120px;
+  /* optional */
+  /* border-top: solid 0.6px #252525; */
 }
