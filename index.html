@@ -14,9 +14,19 @@
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/header.css">
   <link rel="stylesheet" href="static/css/pricing.css">
+  <link rel="stylesheet" href="static/css/faq.css">
+  <link rel="stylesheet" href="static/css/methodology.css">
 
   <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+    integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+
   <script src="static/js/main.js" defer></script>
+  <script src="static/js/animations.js" defer></script>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="static/assets/favicons/apple-touch-icon.png">
@@ -24,8 +34,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="static/assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="static/assets/favicons/site.webmanifest">
 
-  <!-- mojs animations -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+
+
+
+  <!-- Remix Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
 
 
@@ -68,9 +82,9 @@
       <button class="btn1 btn4" id="CTApopupBtn2">Get Started </button>
     </div>
   </section>
-  
+
   <main>
-    <section class="home">
+    <section class="hero_section">
 
       <h1>Unlock effortless Business growth with our world-class Technical and Marketing team.</h1>
 
@@ -140,20 +154,204 @@
           </ul>
           <h3>Contact team for custom plans.</h3>
 
-          <button class="btn1 btn2">Get Started</button>
+          <button class="btn1 btn4">Get Quota</button>
         </section>
       </section>
     </section>
 
+    <section class="our_methodology">
+      <h1>
+        We’re the personal, world-class YouTube team you've been dreaming about. No big budgets required.
+
+      </h1>
+      <button class="btn1 btn4">Get Started</button>
+
+      <section>
+        <div>
+          <h2>
+            Strategy & Planning.
+          </h2>
+          <p>
+            So many niches to choose from, so little time. How do you stand out? Only 2.5% of YouTubers ever hit 1,000
+            subscribers. Our expert strategists put the odds in your favor and make your channel standout in a sea of
+            noise.
+          </p>
+        </div>
+        <div>
+          <img id="svg_animate1" src="static/assets/svg/undraw_business_decisions_re_84ag (1).svg" id="testGsap" alt="">
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img id="svg_animate2" src="static/assets/svg/undraw_growth_curve_re_t5s7.svg" alt="">
+        </div>
+
+        <div>
+          <h2>
+            Concepts & Scripting
+          </h2>
+          <p>
+            It takes ages to generate ideas, research them, and create compelling scripts. Not anymore. HeyFriends! is
+            an idea generation machine with top-notch writers to boot.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <h2>
+            Video Editing
+            & Animation </h2>
+          <p>
+            It takes 10+ hours to edit a video. Sometimes entire days if you want to get fancy. We've built a
+            world-class team of editors & animators that do it all for you. All you have to do is press record.
+          </p>
+        </div>
+        <div>
+          <img id="svg_animate3" src="static/assets/svg/undraw_product_iteration_kjok.svg" alt="">
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <img id="svg_animate4" src="static/assets/svg/undraw_programming_re_kg9v.svg" alt="">
+        </div>
+
+        <div>
+          <h2>
+            Thumbnail Design
+            + Optimization </h2>
+          <p>
+            You know how important your thumbnails are but it's so hard to get them right! Not for us. We'll create the
+            perfect thumbnails and optimize old ones as part of our Perfect Packaging process.
+          </p>
+        </div>
+      </section>
+
+    </section>
 
 
+    <!-- FAQ container -->
+    <h1>Have questions?</h1>
+    <section class="faq_container">
+      <section class="left">
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <div class="answer hidden">
+            <p>
+              It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+              looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to
+              a
+              week or more depending on complexity.
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+        <div class="faq">
+          <div class="top">
+            <h3>
+              How long will the video take?
+            </h3>
+            <div><i class="ri-add-line"></i></div>
+          </div>
+          <!-- <p>
+            It depends on a bunch of things! Are we helping you generate ideas and write the script? Or are you only
+            looking for HeyFriends to edit the video and handle packaging? On average videos can take 2 days and up to a
+            week or more depending on complexity.
+          </p> -->
+        </div>
+      </section>
 
+      <section class="right">
+        <img src="static/assets/favicons/android-chrome-192x192.png" alt="">
+        <h2>
+          Get started with a free strategy call!
+        </h2>
+        <button class="btn1 btn4">Get started now</button>
+      </section>
+    </section>
   </main>
-  
-
 
   <footer>
-
+    <section>
+      <div>Terms of Service</div>
+      <h2> <img src="static/assets/favicons/favicon-32x32.png" alt="">Unicorn Space</h2>
+      <div>
+        <i class="ri-instagram-line"></i>
+        <i class="ri-twitter-x-line"></i>
+      </div>
+    </section>
+    <section>Site design by<a href="https://mohdfaizan.me" target="_blank"> mohdfaizan.me</a> </section>
   </footer>
 
 </body>

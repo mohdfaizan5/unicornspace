@@ -59,3 +59,9 @@ window.onscroll = function (e) {
   }
   oldScrollY = window.scrollY;
 }
+
+
+// 
+document.querySelector('.faq').addEventListener('click', ()=>{
+  document.querySelector('.faq').classList.toggle('active')
+})
