@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Farro:wght@400;500;700&family=Inter:wght@300;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Faro';
+  src: url(../../static/assets/fonts/Faro-RegularLucky.ttf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../../static/assets/fonts/inter/Inter-Regular.ttf);
+}
+
+* {
+  font-family: 'Inter';
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Faro', 'Inter-medium', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f8f4f0;
+  color: #1e3a2b;
+  overflow-x: hidden;
+  position: relative;
+
+}
+
+/* header button */
+
+.btn1 {
+  background-color: #cfdcff;
+  color: #000000;
+  border: none;
+  padding: 24px 32px;
+  border-radius: 99px;
+  font-family: 'Inter-semibold';
+  font-size: 20px;
+}
+
+.btn1:hover {
+  background-color: #1e3a2b;
+  color: #f8f4f0;
+  transition: all 0.3s ease-in;
+}
+
+.btn2 {
+  background-color: #cfdcff;
+  color: #252525;
+}
+
+/* Main */
+
+main {
+  padding: 40px 420px;
+  height: 100vh;
+}
+
+.title {
+  font-size: 48px;
+  text-align: center;
+  /* font-weight: 700; */
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.made-by,
+.date {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.quote {
+  border-left: solid .8px #252525;
+  padding-left: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.content-section {
+  height: 320vh;
+}
+
+.img1 {
+  width: 100%;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sub-title {
+  margin-top: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
+
+}
+
+.order-list {
+  padding-left: 80px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.content-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+.content1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.content-solution {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Video tutorial */
+
+.video-title {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.video-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+iframe {
+  display: flex;
+  /* Why isn't this working */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form */
+
+.form-txt {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.email-input {
+  padding: 12px 28px 12px 18px;
+  border-radius: 6px;
+  border: solid 0.6px #252525;
+  outline: none;
+  font-size: 14px;
+}
+
+form {
+  /* height: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: relative; */
+}
+
+
+.submit-btn {
+  padding: 12px 18px;
+  border: none;
+  background-color: #252525;
+  color: white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  /* position: absolute;
+  z-index: 2;
+  top: 30px;
+  right: 290px;
+  transform: translateX(2px); */
+
+  margin-left: -16px;
+  /* font-weight: 700; */
+  font-size: 16px;
+}
+
+/* Progress bar */
+
+#progress-bar {
+  /* creating variable - named progress*/
+  --progress: 0;
+
+  width: var(--progress);
+
+
+  height: 6px;
+  border-bottom: solid 2px #252525;
+  position: fixed;
+  top: 90px;
+  left: 0;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 30px;
+  align-items: center;
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  width: 96%;
+  background-color: #f8f4f0;
+  height: 40px;
+  z-index: 6;
+}
+
+main {
+  margin-top: 120px;
+  /* optional */
+  /* border-top: solid 0.6px #252525; */
+}
+
+
+/* Popup styles */
+
+#model-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 0.4px #252525;
+  width: 80%;
+  max-width: 400px;
+  background: white;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  /*  */
+  display: none;
+  z-index: 100;
+}
+
+.offer-txt {
+  padding: 30px 40px 40px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+.offer-txt h2 {
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.offer-txt small {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 30px;
+  line-height: 16px;
+}
+
+.offer-txt form {
+  display: flex;
+  border-radius: 6px;
+  background-color: #f8f4f0
+}
+
+.offer-txt form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  padding: 12px 18px;
+  background: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.offer-txt form button {
+  border: 0;
+  outline: 0;
+  background-color: #252525;
+  color: #f8f4f0;
+  font-size: 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+}

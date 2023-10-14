@@ -135,7 +135,7 @@ main h1 {
   /* bottom: calc(100vh - 20%);
   left: 50%;
   right: 50%; */
-  
+
 }
 
 .cta_popup_container div {
@@ -157,12 +157,12 @@ main h1 {
 
 }
 
-.slideDown{
+.slideDown {
   transform: translateY(-20px);
-  
+
 }
 
-.slideUp{
+.slideUp {
   transform: translateY(100px);
   /* transition: all 1s ease; */
 
@@ -172,7 +172,7 @@ main h1 {
   
 } */
 
-.loader-wrapper{
+.loader-wrapper {
   height: 100vh;
   width: 100%;
   background-color: #1e3a2b;
@@ -188,7 +188,7 @@ main h1 {
   z-index: 1;
 }
 
-.loader-wrapper .loader{
+.loader-wrapper .loader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,11 +196,11 @@ main h1 {
   justify-content: center;
 }
 
-.loader-wrapper img{
+.loader-wrapper img {
   width: 50px;
 }
 
-.loader-wrapper h2{
+.loader-wrapper h2 {
 
   color: #f8f4f0;
   font-size: 18px;
