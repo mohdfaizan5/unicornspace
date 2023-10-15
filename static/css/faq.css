@@ -30,8 +30,8 @@
   padding: 16px 24px;
 }
 
-.faq_container .faq .answer p{
-  
+.faq_container .faq .answer p {
+
   font-size: 20px;
   font-family: 'Inter-medium';
   padding: 8px 24px;
@@ -41,7 +41,7 @@
   max-height: 300px;
 }
 
-.faq_container .faq .answer{
+.faq_container .faq .answer {
   overflow: hidden;
   max-height: 0;
 }
@@ -61,13 +61,13 @@
   border-radius: 50%;
 }
 
-.faq_container .faq .top div:hover{
+.faq_container .faq .top div:hover {
   border: 1px solid #1e3a2b;
   height: 37px;
   width: 37px;
 }
 
-.faq_container .faq .top div:active{
+.faq_container .faq .top div:active {
   background-color: #1e3a2b;
   color: rgb(239, 230, 220);
 }
@@ -93,14 +93,16 @@
 
 
   /* background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 101,1)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,1)'/%3E%3Ccircle cx='0' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3Ccircle cx='40' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E "); */
-  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 13,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,1)'/%3E%3Ccircle cx='0' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3Ccircle cx='40' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 13,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,1)'/%3E%3Ccircle cx='0' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3Ccircle cx='40' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
 
   color: rgb(34, 34, 34);
   padding: 42px 36px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  /* t */
+  row-gap: 34px;
 }
 
 .faq_container .right img {
@@ -111,4 +113,61 @@
   font-size: 32px;
   font-weight: 700;
   color: #1e3a2b;
+}
+
+/*  */
+
+@media (max-width: 426px) {
+  .faq_container {
+    flex-direction: column;
+  }
+
+  .faq_container .faq {
+    width: 422px;
+  }
+
+  .query {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .faq_container .faq h3 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-right: 20px;
+  }
+
+  .faq_container .faq .top {
+    justify-content: left;
+  }
+
+  .faq_container .right {
+    height: 226px;
+    width: 249px;
+    row-gap: 32px;
+    padding: 22px 18px;
+    align-items: center;
+
+    /* doubt */
+    margin-left: 60px;
+
+  }
+
+  .faq_container .right h2 {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .faq_container .right img {
+    height: 52px;
+    border: solid 0.4px rgb(34, 34, 34);
+    border-radius: 50%;
+  }
+
+  .btnn {
+    font-size: 16px;
+    padding: 16px 26px;
+  }
+
 }

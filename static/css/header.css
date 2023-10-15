@@ -4,9 +4,8 @@ header {
   padding: 30px 30px;
   align-items: center;
   font-size: 20px;
-  border-bottom: 2px solid green;
-  /* background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 13,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,1)'/%3E%3Ccircle cx='0' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3Ccircle cx='40' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ") */
-
+  /* border-bottom: 2px solid green; */
+  /* background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='40' height='40' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 13,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,1)'/%3E%3Ccircle cx='0' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3Ccircle cx='40' cy='20' r='1' fill='rgba(236, 201, 75,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ") */
 }
 
 header div {
@@ -72,14 +71,14 @@ footer section:nth-of-type(2) {
   justify-content: center;
 }
 
-footer section:nth-of-type(1) h2{
+footer section:nth-of-type(1) h2 {
   gap: 10px;
   display: flex;
   align-items: center;
   /* background-color: rebeccapurple; */
 }
 
-footer i{
+footer i {
   background-color: #1e3a2b;
   color: rgb(207, 220, 255);
   padding: 10px;
@@ -88,7 +87,7 @@ footer i{
 
 }
 
-footer a{
+footer a {
   color: #1e3a2b;
 }
 
@@ -109,8 +108,8 @@ footer a{
     /* padding: 20px 28px; */
   }
 
-  /* header h2{
-    font
+  /* header h2 {
+    text-align: center;
   } */
 
 
@@ -130,5 +129,14 @@ footer a{
     font-size: 18px;
     line-height: 18px;
 
+  }
+
+  /* Footer */
+
+  footer section:nth-of-type(1) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 40px;
   }
 }
