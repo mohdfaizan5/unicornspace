@@ -2,6 +2,7 @@
   font-family: 'Faro';
   src: url(../assets/fonts/Faro-SemiBoldSad.ttf);
 }
+
 @font-face {
   font-family: 'Faro-bold';
   src: url(../assets/fonts/Faro-BoldSad.ttf);
@@ -73,7 +74,8 @@ body {
   background-color: #1e3a2b;
   color: #f8f4f0;
 }
-.btn4:hover{
+
+.btn4:hover {
   transition: all 0.3s ease-in;
   background-color: #f8f4f0;
   border: 2px solid #1e3a2b;
@@ -311,16 +313,42 @@ main h1 {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f8f4f0; 
+  background: #f8f4f0;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #1e3a2b; 
+  background: #1e3a2b;
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #284c39; 
+  background: #284c39;
+}
+
+/* Responsive */
+
+@media (max-width: 426px) {
+  .hero_section h1 {
+    font-size: 44px;
+    line-height: 46px;
+  }
+
+  .hero_section h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .btn1 {
+    padding: 20px 28px;
+    font-size: 18px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+
+
 }
