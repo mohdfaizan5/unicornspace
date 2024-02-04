@@ -1,17 +1,16 @@
-# Unicorn Stable
+# Unicorn Stable Vanilla
 
 A place where startups are fueled and guided
 
 Here you can convert your ideas to products && products to profits
 
+### Style Guide:
 
-### Good Inspirations:
+primary: "#0180F5",
+secondary: "#121212",
+bg: "#F3F3F5",
+"bg-shade":"#808080",
 
-1. keyframes.design
-2. https://www.viralcuts.co/
-
-
-### Plans 
 
 #### Idea to Product:
 $499
@@ -56,21 +55,3 @@ A place where startups are fueled and
 
 Here you can convert your ideas to products && products to profits
 ```
-
-## Quota
-
-- Domain (.com) = $12/year
-- Hosting => Depends, $20/month or other indian options like Hostinger $5/month
-- Estimated time of development(practical) => 3-4 days 
-  > if client can give all requirements oneshot
-- The final website will be 
-	- Mobile responsive
-	- Tablets and all other screen responsive
-	- Accessibilty enabled
-	- SEO friendly
-- Estimated cost of development(depends)
-	- If we use the best web technology, using React.js and TailwindCSS and develop,
-	- We'll be using the best things and features and hence we'll get a robust application
-	- Most cost what I feel is depends on customer purchasing power, I'd charged 7k inr for a landing page last time.
-	>> We'll first discuss on this
-
