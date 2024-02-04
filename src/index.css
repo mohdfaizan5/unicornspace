@@ -8,6 +8,10 @@
     .btn-primary{
       @apply px-3 py-2 rounded-full bg-secondary text-bg my-3 font-semibold hover:shadow-primary hover:shadow-xl active:shadow-secondary
     } 
+
+    .btn-secondary{
+      @apply px-3 py-2 rounded-full bg-primary text-bg my-3 font-semibold hover:outline-double hover:outline-secondary active:shadow-secondary mb-2
+    } 
   
 }
 
