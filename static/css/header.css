@@ -137,6 +137,8 @@ footer a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 30px;
   }
+
+
 }

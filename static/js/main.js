@@ -46,22 +46,32 @@ window.addEventListener('load', () => {
 
 // cta_popup_container scroll animation
 
-let cta_popup_container = document.querySelector('.cta_popup_container')
-let oldScrollY = window.scrollY;
-let directionText = document.getElementById('direction');
-window.onscroll = function (e) {
-  if (oldScrollY < window.scrollY) {
-    console.log(" Down")
-    cta_popup_container.classList.toggle('slideDown')
-  } else {
-    console.log("up")
-    cta_popup_container.classList.toggle('slideUp')
-  }
-  oldScrollY = window.scrollY;
-}
+// let cta_popup_container = document.querySelector('.cta_popup_container')
+// let oldScrollY = window.scrollY;
+// let directionText = document.getElementById('direction');
+// window.onscroll = function (e) {
+//   if (oldScrollY < window.scrollY) {
+//     console.log(" Down")
+//     cta_popup_container.classList.toggle('slideDown')
+//   } else {
+//     console.log("up")
+//     cta_popup_container.classList.toggle('slideUp')
+//   }
+//   oldScrollY = window.scrollY;
+// }
 
 
 // 
-document.querySelector('.faq').addEventListener('click', ()=>{
-  document.querySelector('.faq').classList.toggle('active')
+// document.querySelector('.faq').addEventListener('click', ()=>{
+//   document.querySelector('.faq').classList.toggle('active')
+// })
+
+
+// FAQ Question answer toggle
+document.querySelectorAll('.faq').forEach(eachFaq => {
+  eachFaq.querySelector('i').addEventListener('click', ()=>{
+    eachFaq.querySelector(".answer").classList.toggle("show_answer")
+  })
+
+
 })
