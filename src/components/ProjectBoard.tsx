@@ -4,7 +4,7 @@ import React from "react";
 const ProjectBoard = () => {
   return (
     <section
-      className={`hover:bg-gradient-to-r hover:duration-1000 hover:transition-colors hover:ease-in hover:from-cyan-500 hover:to-blue-500 flex flex-col md:flex-row justify-between h-64 md:h-52  w-full py-10  md:px-24 px-10 gap-5 items-st`}
+      className={`hover:bg-gradient-to-r hover:duration-1000 hover:transition-colors hover:ease-in hover:from-cyan-500 hover:to-blue-500 flex flex-col md:flex-row justify-between h-64 md:h-52  w-full border-b py-10  md:px-24 px-10 gap-5 items-st`}
     >
       <div>
         <h1 className="text-2xl font-satori-500">Cula</h1>

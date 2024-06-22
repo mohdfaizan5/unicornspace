@@ -37,6 +37,9 @@
     hsl(340deg 100% 16%) 100%
   );
 }
+
+
+
 .front {
   display: flex;
   position: relative;
@@ -79,4 +82,12 @@
 }
 .pushable:focus:not(:focus-visible) {
   outline: none;
+}
+
+
+/* outline text */
+.outlineText
+{
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
 }

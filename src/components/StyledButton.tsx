@@ -5,10 +5,10 @@ const StyledButton = ({
   className,
 }: {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }) => {
   return (
-    <button className={`pushable `}>
+    <button className={`pushable flex items-center justify-center`}>
       <span className="shadow"></span>
       <span className="edge"></span>
       <span className={`front ${className}`}>{children}</span>
