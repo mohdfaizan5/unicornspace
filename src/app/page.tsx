@@ -7,9 +7,8 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pb-10 overflow-x-hidden cursor-none font-satori bg-primary text-gray-50">
+    <div className="pb-10 overflow-x-hidden font-satori bg-background text-gray-50">
       <Navbar />
-
       <HeroSection/>
       <ProjectBoard />
       <ProjectBoard />
