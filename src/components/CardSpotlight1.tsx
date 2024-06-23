@@ -44,7 +44,7 @@ const CardSpotlight1 = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={twMerge(
-        `relative flex flex-col items-start justify-between w-[90vw] mx-auto h-52 md:w-[30vw] md:h-72 px-8 py-10 overflow-hidden border border-gray-800 shadow-2xl rounded-xl bg-gradient-to-r from-black to-gray-950  `
+        `relative flex flex-col items-start justify-between w-[90vw] mx-auto md:mx-0 h-52 md:w-[30vw] md:h-72 px-8 py-10 overflow-hidden border border-gray-800 shadow-2xl rounded-xl bg-gradient-to-r from-black to-gray-950  `
       )}
     >
       <div

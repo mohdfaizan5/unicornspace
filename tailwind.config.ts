@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        // bebas: "var(--bebas-new)"
+        bebas: "bebus"
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

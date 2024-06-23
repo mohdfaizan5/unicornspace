@@ -16,20 +16,20 @@ const PricingSection = () => {
     <div className="">
       <Navbar />
       <section className="relative flex flex-col items-center py-10 mt-24">
-        <h1 className="text-6xl font-bold">Pricing</h1>
+        <h1 className="text-6xl font-bold font-bebas">Pricing</h1>
         <p className="mt-3 font-light text-md opacity-70 ">
           $100 off for the first 3710 customers (7 left)
         </p>
-        <div className="flex flex-col justify-center gap-10 my-10 md:flex-row">
+        <div className="flex flex-col justify-center  gap-10 my-10 md:flex-row">
           <div
-            className={`flex flex-col justify-between bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950 w-96`}
+            className={`flex flex-col justify-between gap-5 bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950 w-96`}
           >
-            <div>
+            <div className="py-6">
               <h4 className="text-xl font-semibold">Starter</h4>
-              <h2 className="mt-2">
+              <h2 className="mt-2 ">
                 <span className="mr-2 line-through opacity-80">$269</span>
-                <span className="mr-1 text-5xl font-bold">$169</span>
-                <span className="text-sm font-light">USD</span>
+                <span className="mr-1 text-5xl font-bold font-bebas">$169</span>
+                <span className="text-sm font-light ">USD</span>
               </h2>
             </div>
             <ul className="space-y-2 text-left text-gray-500 dark:text-gray-400">
@@ -67,7 +67,7 @@ const PricingSection = () => {
               </CardDescription>
               <CardTitle className="mt-2">
                 <span className="mr-2 line-through opacity-80">$269</span>
-                <span className="mr-1 text-5xl font-bold">$399</span>
+                <span className="mr-1 font-bebas text-5xl font-bold">$399</span>
                 <span className="text-sm font-light">USD</span>
               </CardTitle>
             </CardHeader>
