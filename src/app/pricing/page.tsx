@@ -27,8 +27,8 @@ const PricingSection = () => {
             <div className="py-6">
               <h4 className="text-xl font-semibold">Starter</h4>
               <h2 className="mt-2 ">
-                <span className="mr-2 line-through opacity-80">$269</span>
-                <span className="mr-1 text-5xl font-bold font-bebas">$169</span>
+                <span className="mr-2 line-through opacity-80">$2000</span>
+                <span className="mr-1 text-5xl font-bold font-bebas">$997</span>
                 <span className="text-sm font-light ">USD</span>
               </h2>
             </div>
@@ -66,8 +66,10 @@ const PricingSection = () => {
                 Starter
               </CardDescription>
               <CardTitle className="mt-2">
-                <span className="mr-2 line-through opacity-80">$269</span>
-                <span className="mr-1 font-bebas text-5xl font-bold">$399</span>
+                <span className="mr-2 line-through opacity-80">$3000</span>
+                <span className="mr-1 font-bebas text-5xl font-bold">
+                  $1977
+                </span>
                 <span className="text-sm font-light">USD</span>
               </CardTitle>
             </CardHeader>
