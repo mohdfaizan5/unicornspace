@@ -5,8 +5,9 @@ import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 const bebas = Bebas_Neue({
-  weight:"400",
-  variable: "--bebas-neue", subsets: [ "latin"]
+  weight: "400",
+  variable: "--bebas-neue",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -21,8 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      {/* <link rel="icon" href="/favicon.png" sizes="any" /> */}
-      <body className={inter.className}>
+      <body className={inter.className + " text-zinc-300"}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
