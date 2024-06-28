@@ -10,7 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navbar from "@/components/Navbar";
-import StyledButton from "@/components/StyledButton";
+import StyledButton from "@/components/other/StyledButton";
 const PricingSection = () => {
   return (
     <div className="">

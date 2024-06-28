@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import StyledButton from "./StyledButton";
+import StyledButton from "./other/StyledButton";
 
 const CardSpotlight2 = () => {
   const divRef = useRef<HTMLDivElement>(null);

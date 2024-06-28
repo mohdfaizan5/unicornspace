@@ -1,5 +1,5 @@
 import React from "react";
-import StyledButton from "./StyledButton";
+import StyledButton from "./other/StyledButton";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
@@ -11,7 +11,7 @@ const HeroSection = () => {
         We craft webapps <br className="hidden"/> & brands
       </h1>
       <p className="font-medium md:mt-2 md:text-center md:w-[50vw] text-zinc-500 ">
-        UnicornSpace is a leading UX design agency based in Canada. We help
+        UnicornSpace is a leading agency based in India. We help
         startups & Fortune 500 companies delight humans on the other side of the
         screen.
       </p>
