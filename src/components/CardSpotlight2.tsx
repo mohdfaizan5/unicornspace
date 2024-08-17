@@ -2,6 +2,8 @@
 import React, { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import StyledButton from "./other/StyledButton";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 const CardSpotlight2 = () => {
   const divRef = useRef<HTMLDivElement>(null);
@@ -62,13 +64,17 @@ const CardSpotlight2 = () => {
           </h5>
           {/* <MoveRight className="group-hover:-translate-x-1" size={12} /> */}
         </div>
-        <h2 className="text-2xl font-satori-500 text-balance max-w-[70%] leading-8 group-hover:translate-x-1">
+        <h2 className="text-2xl font-satori-500 text-balance max-w-[70%] leading-8 group-hover:translate-x-1 ">
           Lets get to it, together and lets grow high
         </h2>
       </div>
       <div className="group-hover:translate-x-1">
         {/* <h6 className="text-xs font-satori-300">Start a deal </h6> */}
-        <StyledButton>Get started</StyledButton>
+        <Link href={"/pricing"}>
+          <StyledButton className="flex items-center gap-1">
+            Discuss <ArrowRightIcon />
+          </StyledButton>
+        </Link>
       </div>
     </div>
   );

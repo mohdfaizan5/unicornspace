@@ -2,6 +2,7 @@ import React from "react";
 import StyledButton from "./other/StyledButton";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -10,16 +11,19 @@ const HeroSection = () => {
       <h1 className="text-[4rem] md:text-[5rem] align-middle pt-28 tracking-tight selection:bg-red-800 leading-none group hover:select-text z-10 md:text-center font-bebas  ">
         We craft webapps <br className="hidden" /> & brands
       </h1>
-      <p className="font-medium md:mt-2 md:text-center md:w-[50vw] text-zinc-500 ">
+      <p className="font-medium md:mt-2 md:text-center md:max-w-[550px] text-zinc-500 ">
         UnicornSpace is a leading agency based in Bangalore. We help startups &
         Business owners to grow their business online.
       </p>
-      <StyledButton
-        className="flex justify-start items-center  gap-1 btn-primary group  "
-        parentClassName="mt-5"
-      >
-        GetStarted <ArrowTopRightIcon className="group-hover:translate-x-px " />
-      </StyledButton>
+      <Link href={"/pricing"}>
+        <StyledButton
+          className="flex justify-start items-center  gap-1 btn-primary group  "
+          parentClassName="mt-5"
+        >
+          GetStarted{" "}
+          <ArrowTopRightIcon className="group-hover:translate-x-px " />
+        </StyledButton>
+      </Link>
       <Image
         src={"/binary_pngs_white/Binary_black_003.png"}
         alt=""
