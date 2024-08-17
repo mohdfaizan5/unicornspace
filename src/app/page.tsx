@@ -14,7 +14,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="pb-10 overflow-x-hidden font-satori bg-background text-gray-50">
+    <div className="pb-10 overflow-x-hidden font-satori bg-background text-gray-50 w-full">
       <Navbar />
       <HeroSection />
       {/* <div className="py-10">
@@ -29,16 +29,20 @@ const page = () => {
         <CardSpotlight1 />
         <CardSpotlight2 />
       </section>
-      <section className="my-20">
-        <h1 className="text-[4rem] leading-[5.5rem] max-w-[45rem] font-medium  tracking-tight max-[716px]:text-6xl font-bebas max-[600px]:text-5xl max-[470px]:text-4xl  text-center">
-          Our Services
-        </h1>
-        <ol className="opacity-80 list-disc ml-20">
-          <li>WebDevelopment</li>
-          <li>Video Editing</li>
-          <li>SEO</li>
-          <li>Native WebApps</li>
-        </ol>
+      <section className="my-20 flex items-center justify-center w-full">
+        <div>
+          <h1 className="text-[4rem] leading-[5.5rem] max-w-[45rem] font-medium  tracking-tight max-[716px]:text-6xl font-bebas max-[600px]:text-5xl max-[470px]:text-4xl  text-center">
+            Our Services
+          </h1>
+        </div>
+        <div>
+          <ol className="opacity-80 mx-auto  list-disc ml-20">
+            <li>WebDevelopment</li>
+            <li>Video Editing</li>
+            <li>SEO</li>
+            <li>Native WebApps</li>
+          </ol>
+        </div>
       </section>
       {/* <Testimonials/> */}
       <CallOut />

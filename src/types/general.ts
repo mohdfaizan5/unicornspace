@@ -8,4 +8,5 @@ type Project = {
   name: string;
   image: string;
   year: number;
+  tags?: string[];
 };
