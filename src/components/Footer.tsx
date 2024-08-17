@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer
-      className="flex flex-wrap items-center justify-between w-full p-6 mt-10 footer gap-7 grow"
+      className="flex flex-wrap items-center justify-between w-full p-6 md:px-20 mt-10 footer gap-7 grow"
       style={{ borderTop: "1px solid #ffffff20" }}
     >
       <div className="flex flex-col gap-2 footer-section1">
@@ -14,7 +14,7 @@ const Footer = () => {
         </p>
         <div className="flex gap-4">
           <Link
-            href="/"
+            href="/pricing"
             className="px-4 py-2 text-sm font-semibold text-black bg-white rounded-lg"
           >
             Get started
@@ -26,29 +26,26 @@ const Footer = () => {
           <ul className="flex flex-col gap-2 text-sm list-none">
             <p className="font-bold">EXPLORE</p>
             <li>
-              <Link
-                href="docs/templates/startup-saas"
-                className="opacity-75 hover:opacity-100"
-              >
+              <Link href="" className="opacity-75 hover:opacity-100">
                 Templates
               </Link>
             </li>
             <li>
               <Link
-                href="docs/components"
+                href="https://unicornspace-ui.vercel.app/"
                 className="opacity-75 hover:opacity-100"
               >
-                Components
+                UI library
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
-                href="docs/layouts"
+                href=""
                 className="opacity-75 hover:opacity-100"
               >
-                Layouts
+                Meet Team
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="docs/learn" className="opacity-75 hover:opacity-100">
                 Learn
@@ -60,32 +57,29 @@ const Footer = () => {
           <ul className="flex flex-col gap-2 text-sm list-none">
             <p className="font-bold">LEGAL</p>
             <li>
-              <Link
-                href="docs/examples"
-                className="opacity-75 hover:opacity-100"
-              >
-                Examples
+              <Link href="/work" className="opacity-75 hover:opacity-100">
+                Works
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="docs/changelog"
                 className="opacity-75 hover:opacity-100"
               >
                 Changelog
               </Link>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <Link
                 href="docs/roadmap"
                 className="opacity-75 hover:opacity-100"
               >
                 Roadmap
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                href="docs/support"
+                href="mailto:media.unicornspace@gmail.com"
                 className="opacity-75 hover:opacity-100"
               >
                 Support

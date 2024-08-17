@@ -111,27 +111,29 @@ const Navbar = () => {
                       </Button>
                     </Link>
                   </div>
-                  <Link
-                   href={"/pricing"}></Link>
-                  <StyledButton
-                    className="hidden md:flex items-center gap-1 btn-primary group "
-                    parentClassName=" md:flex"
-                  >
-                    GetStarted
-                    <ArrowTopRightIcon className="group-hover:translate-x-px " />
-                  </StyledButton>
+                  <Link href={"/pricing"}>
+                    <StyledButton
+                      className="hidden md:flex items-center gap-1 btn-primary group "
+                      parentClassName=" md:flex"
+                    >
+                      GetStarted
+                      <ArrowTopRightIcon className="group-hover:translate-x-px " />
+                    </StyledButton>
+                  </Link>
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
           </Sheet>
         </nav>
-        <StyledButton
-          className="hidden md:flex items-center gap-1 btn-primary group "
-          parentClassName="hidden md:flex"
-        >
-          GetStarted{" "}
-          <ArrowTopRightIcon className="group-hover:translate-x-px " />
-        </StyledButton>
+        <Link className="hidden md:block" href={"/pricing"}>
+          <StyledButton
+            className=" md:flex items-center gap-1 btn-primary group "
+            parentClassName="hidden md:flex"
+          >
+            GetStarted{""}
+            <ArrowTopRightIcon className="group-hover:translate-x-px " />
+          </StyledButton>
+        </Link>
       </header>
       {/* <hr className="h-px max-w-screen-xl mx-auto my-2 border-0 bg-zinc-700 " /> */}
     </>
