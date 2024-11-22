@@ -7,12 +7,8 @@
   src: url("/BebasNeue-Regular.ttf");
 }
 
-
-
-
 @layer base {
   :root {
-
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -102,3 +98,5 @@
   background: grey;
   border-radius: 10px;
 }
+
+/* handleing project stacks */

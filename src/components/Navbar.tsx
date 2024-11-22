@@ -1,143 +1,44 @@
-"use client";
-// import { CornerDownRight } from "lucide-react";
-import React from "react";
-import StyledButton from "./other/StyledButton";
-import {
-  ArrowDownIcon,
-  ArrowTopRightIcon,
-  HamburgerMenuIcon,
-} from "@radix-ui/react-icons";
-import Image from "next/image";
+import LogoIcon from "@/../public/logo-white-256x256.png";
+import MenuIcon from "@/assets/icon-menu.svg";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
-
-const Navbar = () => {
-  const pathname = usePathname();
-  console.log(pathname);
+import StyledButton from "./other/StyledButton";
+import Image from "next/image";
+import { DropdownMenuIcon } from "@radix-ui/react-icons";
+export const Header = () => {
   return (
-    <>
-      <header className="fixed top-0 left-0 right-0 flex items-center justify-between max-w-screen-xl px-4 py-5 mx-auto border-b border-zinc-700 bg-background  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 z-50 text-zinc-300">
-        <Link
-          href={"/"}
-          className="text-[1rem] tracking-tight selection:bg-red-800 leading-none group hover:select-text text-zinc-300 group flex items-center"
-        >
-          <Image
-            src={"/logo-white-256x256.png"}
-            className="mb-1"
-            alt="logo"
-            width={30}
-            height={30}
-          />
-          <span className="">U</span>nicorn
-          <span className="outlineText">
-            <span className="ease-in ">S</span>pace
-          </span>
-        </Link>
-        <nav className="items-center hidden gap-5 text-sm md:flex font-satori-300 text-zinc-500">
-          <Link
-            className="hover:scale-105 hover:underline-offset-auto "
-            href="/"
-          >
-            <Button className="text-zinc-300" variant={"link"}>
-              {pathname === "/" && (
-                <span className="size-2  mr-1 rounded-full bg-red-700 shadow-[0_0_2px_#fff,inset_0_0_2px_#FF474C,0_0_5px_#ff0000,0_0_15px_#08f,0_0_30px_#08f]"></span>
-              )}
-              Home
-            </Button>
-          </Link>
-          {/* <Separator orientation="vertical" className="bg-primary"></Separator> */}
-          <Link
-            className="hover:scale-105 hover:underline-offset-auto "
-            href="/pricing"
-          >
-            <Button className="-ml-5 text-zinc-300" variant={"link"}>
-              {pathname === "/pricing" && (
-                <span className="size-2  mr-1 rounded-full bg-red-700 shadow-[0_0_2px_#fff,inset_0_0_2px_#FF474C,0_0_5px_#ff0000,0_0_15px_#08f,0_0_30px_#08f]"></span>
-              )}
-              Pricing
-            </Button>
-          </Link>
-          <Link
-            className="hover:scale-105 hover:underline-offset-auto "
-            href="/work"
-          >
-            <Button className="-ml-5 text-zinc-300" variant={"link"}>
-              {pathname === "/work" && (
-                <span className="size-2  mr-1 rounded-full bg-red-700 shadow-[0_0_2px_#fff,inset_0_0_2px_#FF474C,0_0_5px_#ff0000,0_0_15px_#08f,0_0_30px_#08f]"></span>
-              )}
-              Work
-            </Button>
-          </Link>
-        </nav>
-        <nav className="md:hidden">
-          <Sheet>
-            <SheetTrigger>
-              <HamburgerMenuIcon className="text-xl" />
-            </SheetTrigger>
-            <SheetContent className="text-zinc-300" side={"left"}>
-              <SheetHeader>
-                {/* <SheetTitle>Are you absolutely sure?</SheetTitle> */}
-                <SheetDescription className="flex flex-col items-start justify-between h-[80vh] my-auto pt-14">
-                  <div className="flex flex-col gap-5">
-                    <Link className=" hover:scale-105" href="/">
-                      ``
-                      <Button className="text-zinc-300" variant={"link"}>
-                        Home
-                        {pathname === "/" && (
-                          <span className="size-2  ml-1 rounded-full bg-red-700 shadow-[0_0_2px_#fff,inset_0_0_2px_#FF474C,0_0_5px_#ff0000,0_0_15px_#08f,0_0_30px_#08f]"></span>
-                        )}
-                      </Button>
-                    </Link>
-                    {/* <Separator orientation="vertical" className="bg-primary"></Separator> */}
-                    <Link
-                      className="hover:scale-105 hover:underline-offset-auto "
-                      href="/pricing"
-                    >
-                      <Button className="text-zinc-300" variant={"link"}>
-                        Pricing
-                        {pathname === "/pricing" && (
-                          <span className="size-2  ml-1 rounded-full bg-red-700 shadow-[0_0_2px_#fff,inset_0_0_2px_#FF474C,0_0_5px_#ff0000,0_0_15px_#08f,0_0_30px_#08f]"></span>
-                        )}
-                      </Button>
-                    </Link>
-                  </div>
-                  <Link href={"/pricing"}>
-                    <StyledButton
-                      className="hidden md:flex items-center gap-1 btn-primary group "
-                      parentClassName=" md:flex"
-                    >
-                      GetStarted
-                      <ArrowTopRightIcon className="group-hover:translate-x-px " />
-                    </StyledButton>
-                  </Link>
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet>
-        </nav>
-        <Link className="hidden md:block" href={"/pricing"}>
-          <StyledButton
-            className=" md:flex items-center gap-1 btn-primary group "
-            parentClassName="hidden md:flex"
-          >
-            GetStarted{""}
-            <ArrowTopRightIcon className="group-hover:translate-x-px " />
-          </StyledButton>
-        </Link>
-      </header>
-      {/* <hr className="h-px max-w-screen-xl mx-auto my-2 border-0 bg-zinc-700 " /> */}
-    </>
+    <header className=" py-4 border-b  border-white/15 md:border-none sticky top-0 z-40 ">
+      <div className="absolute inset-0 backdrop-blur-xl  -z-10 md:hidden "></div>
+      <div className="container">
+        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto relative">
+          <div className="absolute inset-0 backdrop-blur -z-10 "></div>
+          <div>
+            <div className="border h-10 w-10 rounded-lg  justify-center items-center border-white/15 grid place-content-center">
+              {" "}
+              <Image src={LogoIcon.src} width={40} alt="" height={40} />
+            </div>
+          </div>
+          <div className="md:flex hidden  justify-center items-center">
+            <nav className="flex gap-8 items-center justify-center text-white/70 text-sm">
+              <Link href={"/"} className="hover:text-white">
+                Features
+              </Link>
+              <Link href={"/"} className="hover:text-white">
+                Developers
+              </Link>
+              <Link href={"/"} className="hover:text-white">
+                Pricing
+              </Link>
+              <Link href={"/"} className="hover:text-white">
+                Changelog
+              </Link>
+            </nav>
+          </div>
+          <div className=" flex gap-4 justify-center items-center ">
+            <StyledButton>Join Waitlist</StyledButton>
+            <DropdownMenuIcon className="size-8 md:hidden" />
+          </div>
+        </div>
+      </div>
+    </header>
   );
 };
-
-export default Navbar;
