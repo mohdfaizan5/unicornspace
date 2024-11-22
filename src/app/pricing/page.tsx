@@ -1,21 +1,16 @@
 import React from "react";
 import {
-  Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import Navbar from "@/components/Navbar";
+
 import StyledButton from "@/components/other/StyledButton";
 import Link from "next/link";
 const PricingSection = () => {
   return (
     <div className="">
-      <Navbar />
       <section className="relative flex flex-col items-center py-10 mt-24">
         <h1 className="text-6xl font-bold font-bebas">Pricing</h1>
         <p className="mt-3 font-light text-md opacity-70 ">
@@ -92,10 +87,6 @@ const PricingSection = () => {
                   ⚡ Grab this offer now!
                 </StyledButton>
               </Link>
-              {/* <Button>⚡ Get IndieHacker</Button> */}
-              {/* <p className="mt-2 text-sm text-center opacity-70">
-                Pay once. Scale your business forever!
-              </p> */}
             </div>
           </div>
         </div>

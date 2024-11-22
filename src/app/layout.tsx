@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Bebas_Neue } from "next/font/google";
+import { Inter, Anton } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
-const bebas = Bebas_Neue({
+const bebas = Anton({
   weight: "400",
   variable: "--bebas-neue",
   subsets: ["latin"],
