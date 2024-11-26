@@ -19,17 +19,16 @@ import PricingSection from "./pricing/page";
 const page = () => {
   return (
     <>
-      <Header />
-      <div className="container pb-10 overflow-x-hidden font-satori bg-background text-gray-50 w-full ">
+      <div className=" pb-10 overflow-x-hidden font-satori bg-background text-gray-50 w-full ">
         <HeroSection />
-        <CompaniesCarousal />
-        <Projects />
+        {/* <CompaniesCarousal /> */}
+        <Projects viewAll />
 
-        <section className="flex flex-col justify-center gap-1 md:flex-row mt-20">
+        {/* <section className="flex flex-col justify-center gap-1 md:flex-row mt-20">
           <CardSpotlight1 />
           <CardSpotlight2 />
-        </section>
-        <section className="my-20 flex items-center justify-center w-full">
+        </section> */}
+        {/* <section className="my-20 flex items-center justify-center w-full">
           <div>
             <h1 className="text-[4rem] leading-[5.5rem] max-w-[45rem] font-medium  tracking-tight max-[716px]:text-6xl font-bebas max-[600px]:text-5xl max-[470px]:text-4xl  text-center">
               Our Services
@@ -43,16 +42,15 @@ const page = () => {
               <li>Native WebApps</li>
             </ol>
           </div>
-        </section>
+        </section> */}
         {/* <Testimonials/> */}
-        <CallOut />
         <Testimonials />
-        <Typewriter />
-        <StackingProjects />
+        {/* <Typewriter />
+        <StackingProjects /> */}
         <CallToAction />
-        <Features />
-        <PricingSection />
-        <Footer />
+        {/* <Features /> */}
+        {/* <PricingSection /> */}
+        {/* <CallOut /> */}
       </div>
     </>
   );

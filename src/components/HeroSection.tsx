@@ -3,21 +3,31 @@ import StyledButton from "./other/StyledButton";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
+import { CompaniesCarousal } from "@/sections/companies-carousal";
+import { SvgAssests } from "./svg-assets";
+import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <main className="h-[90vh] flex flex-col gap-3 justify-center items-start px-5 md:items-center pb-10 relative">
+    <main className="h-[90vh] flex flex-col gap-4 justify-center items-start px-5 md:items-center pb-10 mt-10 md:mt-24 relative">
       <div className="absolute mt-[75px]  bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-      <h1 className="text-[4rem] md:text-[5rem] align-middle pt-28 tracking-tight selection:bg-red-800 leading-none group hover:select-text z-10 md:text-center font-bebas  ">
-        We craft webapps <br className="hidden" /> & brands
+      <h1 className="text-[3rem] align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[55px] font-medium capitalize tracking-tighter max-w-[52rem] ">
+        Turn your{" "}
+        <span className="relative inline-block font-serif md:mr-2 overflow-visible">
+          ideas
+          <SvgAssests.ThreeLines className="absolute -top-4  -right-4 stroke-white  text-white fill-red-400" />
+        </span>{" "}
+        into <span className="underline">successfull</span> online businesses
+        {/* We craft webapps <br className="hidden" /> & brands */}
       </h1>
-      <p className="font-medium md:mt-2 md:text-center md:max-w-[550px] text-zinc-500 ">
+      <p className=" text-left opacity-70 text-lg mb-10 max-w-2xl md:text-center">
         UnicornSpace is a leading agency based in Bangalore. We help startups &
         Business owners to grow their business online.
       </p>
       <Link href={"/pricing"}>
+        {/* <Button variant={"secondary"} className="bg-primary  text-white px-4 py-2 text-base">GetStarted </Button> */}
         <StyledButton
-          className="flex justify-start items-center  gap-1 btn-primary group  "
+          className="flex justify-start items-center bg-blue-700 gap-1 btn-primary group  "
           parentClassName="mt-5"
         >
           GetStarted{" "}
@@ -48,6 +58,8 @@ const HeroSection = () => {
         We start from where you stop and we excel{" "}
       </p> */}
       {/* <h1 style={{fontSize: "clamp(3rem, -1.5rem + 8vw, 10rem)"}} className=' font-satori-700'>UnicornSpace</h1> */}
+
+      <CompaniesCarousal />
     </main>
   );
 };

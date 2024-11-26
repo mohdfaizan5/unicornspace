@@ -27,7 +27,7 @@ export default function Features() {
     <section className="py-24  text-white">
       <div className="container px-4 md:px-6">
         <div className="text-center space-y-3 mb-16">
-          <h2 className="text-4xl font-bebas md:text-5xl lg:text-6xl font-bold">
+          <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">
             Built for modern teams
           </h2>
           <p className="text-sm md:text-base text-gray-400">

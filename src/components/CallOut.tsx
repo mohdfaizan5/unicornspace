@@ -7,7 +7,7 @@ const CallOut = () => {
   return (
     <section className="flex flex-col items-center">
       <div className="px-8 space-y-3 py-10 overflow-hidden border border-gray-800 shadow-2xl rounded-xl bg-gradient-to-r from-black to-gray-950 flex flex-col gap-2 items-start md:w-[900px]">
-        <h1 className="text-5xl font-bebas">Ready to work together?</h1>
+        <h1 className="text-5xl md:text-6xl font-medium text-center tracking-tighter">Ready to work together?</h1>
         <p className="text-white/80">
           Book a call and get started on your project today.
           <br /> No BS. Straight to point!.

@@ -6,7 +6,14 @@ type Testimonial = {
 
 type Project = {
   name: string;
-  image: string;
+  slug: string;
+  thumbnail: string;
   year: number;
   tags?: string[];
+  description?: string;
+  content: {
+    h1: string;
+    images: string[];
+    text: string;
+  };
 };
