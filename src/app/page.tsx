@@ -5,16 +5,13 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import { Header } from "@/components/Navbar";
 import Projects from "@/components/Projects";
-import { TypewriterEffectSmooth } from "@/components/typewriter";
 import { CallToAction } from "@/sections/call-to-action";
 import { CompaniesCarousal } from "@/sections/companies-carousal";
 import Features from "@/sections/features";
-import StackingProjects from "@/sections/stacking-projects";
 
 import { Testimonials } from "@/sections/testimonials";
-import Typewriter from "@/sections/typewriter";
+
 import React from "react";
-import PricingSection from "./pricing/page";
 
 const page = () => {
   return (

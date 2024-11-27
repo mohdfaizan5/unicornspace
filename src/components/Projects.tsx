@@ -4,6 +4,8 @@ import Link from "next/link";
 import React from "react";
 import { SvgAssests } from "./svg-assets";
 import { projects } from "@/lib/data";
+import { Button } from "./ui/button";
+import StyledButton from "./other/StyledButton";
 
 const Projects = ({ viewAll }: { viewAll?: boolean }) => {
   // if (viewAll)
@@ -25,13 +27,13 @@ const Projects = ({ viewAll }: { viewAll?: boolean }) => {
       <div className="grid grid-cols-1 md:grid-cols-10 gap-7 justify-center">
         {viewAll
           ? projects
-              .slice(0, 4)
-              .map((project) => (
-                <EachProject data={project} key={project.name} />
-              ))
-          : projects.map((project) => (
+            .slice(0, 4)
+            .map((project) => (
               <EachProject data={project} key={project.name} />
-            ))}
+            ))
+          : projects.map((project) => (
+            <EachProject data={project} key={project.name} />
+          ))}
       </div>
       {/* {viewAll && (
         <Button>
@@ -40,6 +42,15 @@ const Projects = ({ viewAll }: { viewAll?: boolean }) => {
           </Link>
         </Button>
       )} */}
+      {viewAll && (
+
+      <Link href={"/work"} className="mt-10 md:mt-16">
+        <StyledButton className="mx-auto">
+          View All
+        </StyledButton>
+      </Link>
+      )}
+
     </section>
   );
 };
@@ -47,7 +58,7 @@ const Projects = ({ viewAll }: { viewAll?: boolean }) => {
 const EachProject = ({ data }: { data: Project }) => {
   const { thumbnail, name, year, tags } = data;
   return (
-    <div className="w-[400px] mx-auto h-[300px] md:w-[500px] md:h-[350px] col-span-5 py-2 overflow-hidden border border-gray-800 shadow-2xl rounded-xl p-3">
+    <div className="w-[350px] sm:w-[400px] mx-auto h-[300px] md:w-[500px] md:h-[350px] col-span-5 py-2 overflow-hidden border border-gray-800 shadow-2xl rounded-xl p-3">
       <div className="relative h-[70%] overflow-hidden">
         <Image
           className="overflow-hidden aspect-video blur-3xl rounded-t-md"

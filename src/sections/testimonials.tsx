@@ -3,37 +3,44 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
-    name: "Sophia Perez",
-    title: "Director @ Quantum",
-    avatarImg: "https://media.licdn.com/dms/image/v2/D5603AQG3EAetjOVddQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1702555833620?e=1738195200&v=beta&t=0fnedAMSQy5NlkdSk_QRTtm4Ff_FzKZ2aI8xZ_pzVUU",
-  },
-  {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
-    name: "Thomas Land",
-    title: "Director @ Quantum",
-    avatarImg: "https://media.licdn.com/dms/image/v2/D5603AQHz30r9LyJ9gw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1694761423535?e=1738195200&v=beta&t=y6FS6uyOYo0UBBl8BLTswpk9GFTAAipDg1_YhN6eib4",
-  },
-  {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
+    text: "We didnt just get a landing page; we got a partner who truly cared about our brands success. Their insights made all the difference.",
     name: "Muzammil",
     title: "Senior Developer ",
     avatarImg: "https://avatars.githubusercontent.com/u/179683623?v=4",
   },
   {
-    text: "“This product has completely transformed how I manage my projects and deadlines”",
+    text: "“Working with this team felt effortless. They understood our goals and brought our vision to life. Our online presence has grown steadily since then.”",
+    name: "Zaid Sait",
+    title: "CEO @ZedTheBaker",
+    avatarImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73hVuUFS5u6LDMnT3SCUvgQpxIHRkQrRMmA&s",
+  },
+  {
+    text: "What stood out the most was their commitment. They went beyond the brief to make sure everything worked seamlessly. We couldnt be happier.",
+    name: "Tom Land",
+    title: "Founder @ Refurb",
+    avatarImg: "https://pbs.twimg.com/profile_images/1831143497748852736/pGaFNbfr_400x400.jpg",
+  },
+  {
+    text: "They treated our business like their own. The results were seeing now prove that choosing them was the best decision we made.",
+    name: "Azmath Khan",
+    title: "Founder @ WoodDecor",
+    avatarImg: "https://github.com/user-attachments/assets/6162588b-8e33-45c2-aebf-4b8b2280b4a6",
+  },
+  {
+    text: "Their ability to adapt to our needs and deliver on time was incredible. The app has been a hit with our users, and we owe it to their expertise.",
     name: "Ananth Mallya",
     title: "Founder @ QuanTechOrigin",
     avatarImg: "https://media.licdn.com/dms/image/v2/C5603AQEEXgxbKRiR6Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1662395631805?e=1738195200&v=beta&t=q5uPDUrFRCGRhbfNs5-Fj_YdXyPkfXIX5iWP3Lxjgwo",
   },
+  
 ];
 
 export const Testimonials = () => {
   return (
-    <section className="py-20 md:py-24 mt-10 md:mt-24">
+    <section id="testimonials" className="py-20 md:py-24 mt-10 md:mt-24">
       <div className="container px-0">
         <h2 className="text-5xl md:text-6xl font-medium text-center relative tracking-tighter mx-auto w-fit underline decoration-wavy decoration-primary/80 decoration-2 underline-offset-4">
-          Beyond Expectations. <SvgAssests.Chat className="absolute right-5 top-0 md:-top-2 md:-right-14"/>
+          Beyond Expectations. <SvgAssests.Chat  className="w-10 absolute right-5 top-0 md:-top-2 md:-right-14"/>
         </h2>
         <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5 max-w-2xl mx-auto">
           Our revolutionary products and services have transformed our clients.
@@ -53,9 +60,9 @@ export const Testimonials = () => {
                     <Image
                       src={testimonial.avatarImg}
                       alt="test"
-                      className="size-11 rounded-full grayscale "
-                      height={11}
-                      width={11}
+                      className="size-11 rounded-full grayscale"
+                      height={50}
+                      width={50}
                     />
                   </div>
                   <div className="flex flex-col">

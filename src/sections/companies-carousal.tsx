@@ -33,7 +33,7 @@ export const CompaniesCarousal = () => {
                   key={index}
                   src={logo.src}
                   alt={logo.alt}
-                  className="h-6 w-auto"
+                  className="h-6 w-auto grayscale"
                 />
               ))}
             </div>
