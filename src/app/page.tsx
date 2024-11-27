@@ -42,8 +42,7 @@ const page = () => {
         </section> */}
         {/* <Testimonials/> */}
         <Testimonials />
-        {/* <Typewriter />
-        <StackingProjects /> */}
+        
         <CallToAction />
         {/* <Features /> */}
         {/* <PricingSection /> */}
