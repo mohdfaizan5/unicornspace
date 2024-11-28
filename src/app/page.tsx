@@ -1,10 +1,10 @@
 import CallOut from "@/components/callout";
-import CardSpotlight1 from "@/components/CardSpotlight1";
-import CardSpotlight2 from "@/components/CardSpotlight2";
+import CardSpotlight1 from "@/components/card-spotlight1";
+import CardSpotlight2 from "@/components/card-spotlight2";
 import Footer from "@/components/footer";
-import HeroSection from "@/components/HeroSection";
-import { Header } from "@/components/Navbar";
-import Projects from "@/components/Projects";
+import HeroSection from "@/components/hero-section";
+import { Header } from "@/components/navbar";
+import Projects from "@/components/projects";
 import { CallToAction } from "@/components/call-to-action";
 import { CompaniesCarousal } from "@/components/companies-carousal";
 import Features from "@/components/features";

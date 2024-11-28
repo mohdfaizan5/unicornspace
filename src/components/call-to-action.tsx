@@ -1,6 +1,6 @@
 import starsBg from "@/../public/assets/stars.png";
 import gridLines from "@/../public/assets/grid-lines.png";
-import StyledButton from "@/components/other/StyledButton";
+import StyledButton from "@/components/styled-button";
 import Link from "next/link";
 export const CallToAction = () => {
   return (

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 
-import StyledButton from "@/components/other/StyledButton";
+import StyledButton from "@/components/styled-button";
 import Link from "next/link";
 const PricingSection = async (props: { searchParams: SearchParams }) => {
   const searchParams = await props.searchParams;
