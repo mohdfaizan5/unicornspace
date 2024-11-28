@@ -5,10 +5,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Pricing",
+  description: "Check out our pricing plans",
+};
+
 
 import StyledButton from "@/components/other/StyledButton";
 import Link from "next/link";
-const PricingSection = () => {
+const PricingSection = async (props: { searchParams: SearchParams }) => {
+  const searchParams = await props.searchParams;
+
+  // console.log(searchParams);
   return (
     <div className="">
       <section className="relative flex flex-col items-center py-10 mt-24">
@@ -23,9 +34,15 @@ const PricingSection = () => {
             <div className="py-6">
               <h4 className="text-xl font-semibold">Basic Plan</h4>
               <h2 className="mt-2 ">
-                <span className="mr-2 line-through opacity-80">₹20999</span>
+                <span className="mr-2 line-through opacity-80">
+                  {searchParams && searchParams.country == "in"
+                    ? "₹20999"
+                    : "$499"}
+                </span>
                 <span className="mr-1 text-5xl font-bold font-bebas">
-                  ₹16997
+                  {searchParams && searchParams.country == "in"
+                    ? "₹16997"
+                    : "$349"}
                 </span>
                 <span className="text-sm font-light ">only</span>
               </h2>
@@ -64,10 +81,20 @@ const PricingSection = () => {
                 Premium Plan
               </CardDescription>
               <CardTitle className="mt-2">
-                <span className="mr-2 line-through opacity-80">₹37999</span>
-                <span className="mr-1 font-bebas text-5xl font-bold">
-                  ₹27999
+                <span className="mr-2 line-through opacity-80">
+                  {searchParams && searchParams.country == "in"
+                    ? "₹37999"
+                    : "$1099"}
                 </span>
+                <span className="mr-1 text-5xl font-bold font-bebas">
+                  {searchParams && searchParams.country == "in"
+                    ? "₹27999"
+                    : "$649"}
+                </span>
+                {/* <span className="mr-2 line-through opacity-80"></span>
+                <span className="mr-1 font-bebas text-5xl font-bold">
+                  
+                </span> */}
                 <span className="text-sm font-light">only</span>
               </CardTitle>
             </CardHeader>

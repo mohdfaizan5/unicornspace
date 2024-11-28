@@ -1,15 +1,15 @@
-import CallOut from "@/components/CallOut";
+import CallOut from "@/components/callout";
 import CardSpotlight1 from "@/components/CardSpotlight1";
 import CardSpotlight2 from "@/components/CardSpotlight2";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import HeroSection from "@/components/HeroSection";
 import { Header } from "@/components/Navbar";
 import Projects from "@/components/Projects";
-import { CallToAction } from "@/sections/call-to-action";
-import { CompaniesCarousal } from "@/sections/companies-carousal";
-import Features from "@/sections/features";
+import { CallToAction } from "@/components/call-to-action";
+import { CompaniesCarousal } from "@/components/companies-carousal";
+import Features from "@/components/features";
 
-import { Testimonials } from "@/sections/testimonials";
+import { Testimonials } from "@/components/testimonials";
 
 import React from "react";
 
@@ -42,7 +42,7 @@ const page = () => {
         </section> */}
         {/* <Testimonials/> */}
         <Testimonials />
-        
+
         <CallToAction />
         {/* <Features /> */}
         {/* <PricingSection /> */}

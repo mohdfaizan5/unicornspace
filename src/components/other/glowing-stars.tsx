@@ -60,7 +60,7 @@ export const GlowingStarsTitle = ({
       {children}
     </h2>
   );
-};
+};``
 
 export const Illustration = ({ mouseEnter }: { mouseEnter: boolean }) => {
   const stars = 108;

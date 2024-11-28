@@ -1,6 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Social Links",
+  description: "Follow us on social media platforms",
+};
 
 export default function SocialLinks() {
   return (
@@ -39,7 +44,7 @@ export default function SocialLinks() {
           </Button>
         </Link>
         
-        <Link href="https://ui.unicorn-space.com/" className="block">
+        <Link href="https://ui.unicorn-space.com/" target="_blank" className="block">
           <Button 
             variant="secondary" 
             className="w-full py-6 text-lg bg-[#2D3339] hover:bg-[#3D444A] text-white transition-all duration-300 hover:scale-[1.02]"

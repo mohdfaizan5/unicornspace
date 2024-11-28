@@ -16,7 +16,7 @@ const Footer = () => {
       title: "EXPLORE",
       links: [
         { title: "Portfolio", link: "/work" },
-        { title: "Testimonials", link: "https://unicornspace-ui.vercel.app/" },
+        { title: "Testimonials", link: "/#testimonials" },
         { title: "Pricing", link: "/pricing" },
         { title: "Socials", link: "/socials" },
       ],
@@ -34,16 +34,27 @@ const Footer = () => {
       title: "COMPANY",
       links: [
         // { title: "About", link: "/about" },
-        { title: "UI Library", link: "https://unicornspace-ui.vercel.app/" },
+        {
+          title: "UI Library",
+          link: "https://ui.unicorn-space.com/",
+          target: "_blank",
+        },
         // { title: "Careers", link: "/careers" },
-        { title: "Contact", link: "https://www.linkedin.com/company/unicornspace/" },
+        {
+          title: "Contact",
+          link: "https://www.linkedin.com/company/unicornspace/",
+        },
       ],
     },
 
     {
       title: "Our Products",
       links: [
-        { title: "UnicornSpaceUI", link: "https://ui.unicorn-space.com/" },
+        {
+          title: "UnicornSpaceUI",
+          link: "https://ui.unicorn-space.com/",
+          target: "_blank",
+        },
         { title: "FreelanceFlow", link: "#" },
         // { title: "Privacy", link: "#" },
       ],
@@ -87,12 +98,19 @@ const Footer = () => {
         </div>
         <div className="flex gap-6 flex-wrap">
           {data.map((item, i) => (
-            <ul key={i} className="flex flex-col gap-2 text-sm list-none">
+            <ul
+              key={i}
+              className="flex flex-col gap-2 text-sm list-none"
+            >
               <p className="font-bold">{item.title}</p>
-              {item.links.map((link) => (
-                <li className="hover:translate-x-1 transition-all delay-100" key={i}>
+              {item.links.map((link, index) => (
+                <li
+                  className="hover:translate-x-1 transition-all delay-100"
+                  key={index}
+                >
                   <Link
                     href={link.link}
+                    target={link.target}
                     className="opacity-75 hover:opacity-100"
                   >
                     {link.title}

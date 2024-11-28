@@ -4,14 +4,14 @@ import acmeLogo from "@/../public/assets/logo-acme.png";
 import apexLogo from "@/../public/assets/logo-apex.png";
 import celestialLogo from "@/../public/assets/logo-celestial.png";
 import echoLogo from "@/../public/assets/logo-echo.png";
-import pulseLogo from "@/../public/assets/logo-pulse.png";
+import quantechLogo from "@/../public/assets/logo-quantech-origin.png";
 import zedthebaker from "@/../public/assets/logo-zed-the-baker.png";
 import wooddecor from "@/../public/assets/logo-wood-decor.png";
 import Image from "next/image";
 
 export const CompaniesCarousal = () => {
   const logos = [
-    { src: acmeLogo, alt: "Acme Logo" },
+    { src: quantechLogo, alt: "quantechLogo Logo" },
     { src: apexLogo, alt: "Apex Logo" },
     { src: echoLogo, alt: "Echo Logo" },
     { src: celestialLogo, alt: "Celestial Logo" },

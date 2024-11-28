@@ -26,18 +26,21 @@ export const Header = () => {
         <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto relative">
           <div className="absolute inset-0 backdrop-blur -z-10 "></div>
           <div>
-            <Link href={"/"} className=" h-10 w-10 rounded-lg  justify-center items-center border-white/15 grid place-content-center">
+            <Link
+              href={"/"}
+              className=" h-10 w-10 rounded-lg  justify-center items-center border-white/15 grid place-content-center"
+            >
               {" "}
               <Image src={LogoIcon.src} width={40} alt="" height={40} />
             </Link>
           </div>
           <div className="md:flex hidden justify-center items-center"></div>
-            <AllLinks className={"hidden md:flex"} />
+          <AllLinks className={"hidden md:flex"} />
           <div className=" flex justify-between items-center ">
             <Link href={"https://cal.com/unicorn-space/15min"}>
-            <Button className="" variant={"secondary"}>
-              Book a Call
-            </Button>
+              <Button className="" variant={"secondary"}>
+                Book a Call
+              </Button>
             </Link>
             <Drawer>
               <DrawerTrigger className="px-4 py-2 md:hidden block">
@@ -71,10 +74,10 @@ const AllLinks = ({ className }: { className?: ReactNode }) => {
         className
       )}
     >
-      <Link href={"#portfolio"} className="hover:text-white">
+      <Link href={"/#portfolio"} className="hover:text-white">
         Portfolio
       </Link>
-      <Link href={"#testimonials"} className="hover:text-white">
+      <Link href={"/#testimonials"} className="hover:text-white">
         Testimonials
       </Link>
       <Link href={"/pricing"} className="hover:text-white">

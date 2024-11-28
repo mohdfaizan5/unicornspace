@@ -3,15 +3,15 @@ import StyledButton from "./other/StyledButton";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { CompaniesCarousal } from "@/sections/companies-carousal";
+import { CompaniesCarousal } from "@/components/companies-carousal";
 import { SvgAssests } from "./svg-assets";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <main className="h-[90vh] flex flex-col gap-4 justify-center items-start px-5 md:items-center pb-10 mt-10 md:mt-24 relative">
+    <main className="h-[90vh] flex flex-col gap-4 justify-center items-start px-5 md:items-center pb-10 mt-20 sm:mt-10 md:mt-24 relative">
       <div className="absolute mt-[75px]  bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-      <h1 className="text-[3rem] align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[55px] font-medium capitalize tracking-tighter max-w-[52rem] ">
+      <h1 className="text-[2.8rem]  align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[55px] font-medium capitalize tracking-tighter max-w-[52rem] ">
         Turn your{" "}
         <span className="relative inline-block font-serif md:mr-2 overflow-visible">
           ideas
@@ -25,10 +25,9 @@ const HeroSection = () => {
         Business owners to grow their business online.
       </p>
       <Link href={"/pricing"}>
-        {/* <Button variant={"secondary"} className="bg-primary  text-white px-4 py-2 text-base">GetStarted </Button> */}
         <StyledButton
           className="flex justify-start items-center bg-blue-700 gap-1 btn-primary group  "
-          parentClassName="mt-5"
+          parentClassName="mt-0"
         >
           GetStarted{" "}
           <ArrowTopRightIcon className="group-hover:translate-x-px " />
