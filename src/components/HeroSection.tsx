@@ -17,7 +17,7 @@ const HeroSection = () => {
           ideas
           <SvgAssests.ThreeLines className="absolute -top-4  -right-4 stroke-white  text-white fill-red-400" />
         </span>{" "}
-        into <span className="underline">successfull</span> online businesses
+        into <span className="underline">successful</span> online businesses
         {/* We craft webapps <br className="hidden" /> & brands */}
       </h1>
       <p className=" text-left opacity-70 text-lg mb-10 max-w-2xl md:text-center">

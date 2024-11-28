@@ -15,26 +15,28 @@ const Footer = () => {
     {
       title: "EXPLORE",
       links: [
-        { title: "Templates", link: "" },
-        { title: "UI library", link: "https://unicornspace-ui.vercel.app/" },
-        { title: "Learn", link: "docs/learn" },
+        { title: "Portfolio", link: "/work" },
+        { title: "Testimonials", link: "https://unicornspace-ui.vercel.app/" },
+        { title: "Pricing", link: "/pricing" },
+        { title: "Socials", link: "/socials" },
       ],
     },
-    {
-      title: "LEGAL",
-      links: [
-        { title: "Works", link: "/work" },
-        // { title: "Changelog", link: "docs/changelog" },
-        // { title: "Roadmap", link: "docs/roadmap" },
-        { title: "Support", link: "mailto: " },
-      ],
-    },
+    // {
+    //   title: "LEGAL",
+    //   links: [
+    //     { title: "Works", link: "/work" },
+    //     // { title: "Changelog", link: "docs/changelog" },
+    //     // { title: "Roadmap", link: "docs/roadmap" },
+    //     { title: "Support", link: "mailto: " },
+    //   ],
+    // },
     {
       title: "COMPANY",
       links: [
-        { title: "About", link: "/about" },
-        { title: "Careers", link: "/careers" },
-        { title: "Contact", link: "/contact" },
+        // { title: "About", link: "/about" },
+        { title: "UI Library", link: "https://unicornspace-ui.vercel.app/" },
+        // { title: "Careers", link: "/careers" },
+        { title: "Contact", link: "https://www.linkedin.com/company/unicornspace/" },
       ],
     },
 
@@ -72,13 +74,13 @@ const Footer = () => {
             </Link>
           </div>
           <div className="text-xl flex gap-2 items-center">
-            <Link href={"/"}>
+            <Link href={"https://www.linkedin.com/company/unicornspace/"}>
               <FaLinkedin size={18} />
             </Link>
-            <Link href={"/"}>
+            <Link href={"https://x.com/_unicornspace_"}>
               <FaXTwitter size={18} />
             </Link>
-            <Link href={"/"}>
+            <Link href={"https://github.com/mohdfaizan5/unicornspace"}>
               <FaGithub size={18} />
             </Link>
           </div>

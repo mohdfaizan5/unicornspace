@@ -1,6 +1,7 @@
 import starsBg from "@/../public/assets/stars.png";
 import gridLines from "@/../public/assets/grid-lines.png";
 import StyledButton from "@/components/other/StyledButton";
+import Link from "next/link";
 export const CallToAction = () => {
   return (
     <section className="py-20 md:py-24">
@@ -27,7 +28,9 @@ export const CallToAction = () => {
               to point!.
             </p>
             <div className="flex items-center justify-center mt-12">
+              <Link href={"https://cal.com/unicorn-space/15min"}>
               <StyledButton>Book a call.</StyledButton>
+              </Link>
             </div>
           </div>
         </div>

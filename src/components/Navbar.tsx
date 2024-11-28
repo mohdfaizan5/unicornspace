@@ -3,7 +3,6 @@ import MenuIcon from "@/assets/icon-menu.svg";
 import Link from "next/link";
 import StyledButton from "./other/StyledButton";
 import Image from "next/image";
-import { DropdownMenuIcon } from "@radix-ui/react-icons";
 import { Button } from "./ui/button";
 import { RiMenu3Fill } from "react-icons/ri";
 import {
@@ -35,9 +34,11 @@ export const Header = () => {
           <div className="md:flex hidden justify-center items-center"></div>
             <AllLinks className={"hidden md:flex"} />
           <div className=" flex justify-between items-center ">
+            <Link href={"https://cal.com/unicorn-space/15min"}>
             <Button className="" variant={"secondary"}>
               Book a Call
             </Button>
+            </Link>
             <Drawer>
               <DrawerTrigger className="px-4 py-2 md:hidden block">
                 <RiMenu3Fill size={20} />
@@ -73,13 +74,13 @@ const AllLinks = ({ className }: { className?: ReactNode }) => {
       <Link href={"#portfolio"} className="hover:text-white">
         Portfolio
       </Link>
-      <Link href={"/"} className="hover:text-white">
+      <Link href={"#testimonials"} className="hover:text-white">
         Testimonials
       </Link>
-      <Link href={"/"} className="hover:text-white">
+      <Link href={"/pricing"} className="hover:text-white">
         Pricing
       </Link>
-      <Link href={"/"} className="hover:text-white">
+      <Link href={"/socials"} className="hover:text-white">
         Socials
       </Link>
     </nav>
