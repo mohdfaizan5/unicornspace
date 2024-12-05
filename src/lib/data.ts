@@ -51,7 +51,6 @@ export const projects: Project[] = [
         content:
           "It focuses on helping recent graduates and those entering the workforce find their first professional role, offering personalized job recommendations based on their skills, preferences, and location. ",
       },
-      // { type: "image", src: "/assets/unlockpi/screencapture.png" },
       // { type: "li", content: [""] },
       {
         type: "p",
@@ -59,6 +58,7 @@ export const projects: Project[] = [
           "With a user-friendly design and a focus on simplicity, the app makes job hunting less overwhelming for students who are often new to the job market.",
       },
       { type: "p", content: "Technologies used" },
+      { type: "image", src: "/assets/unlockpi/UnlockPi display2.png" },
       {
         type: "p",
         content: "React Native, Typescript, Postgresql, Zustand... ",

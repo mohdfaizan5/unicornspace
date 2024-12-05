@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     default: "Unicorn Space",
     template: "%s - Unicorn Space",
   },
-  description: "Turn your ideas into successful online businesses | Unicorn Space",
+  description:
+    "Turn your ideas into successful online businesses | Unicorn Space",
 };
 
 export default function RootLayout({
@@ -33,15 +34,15 @@ export default function RootLayout({
       <body className={inter.className + " text-zinc-300"}>
         <Header />
 
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-        <Footer />
+        > */}
+        {children}
+        {/* </ThemeProvider> */}
+        {/* <Footer /> */}
       </body>
     </html>
   );

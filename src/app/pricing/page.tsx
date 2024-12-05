@@ -13,11 +13,17 @@ export const metadata: Metadata = {
   description: "Check out our pricing plans",
 };
 
-
 import StyledButton from "@/components/other/StyledButton";
 import Link from "next/link";
 const PricingSection = async (props: { searchParams: SearchParams }) => {
   const searchParams = await props.searchParams;
+  const currentData = new Date();
+  const nextMonthData = new Date(
+    currentData.setMonth(currentData.getMonth() + 1)
+  ).toLocaleString("default", { month: "short" });
+  const nextMonthYear = new Date(
+    currentData.setMonth(currentData.getMonth() + 1)
+  ).getFullYear();
 
   // console.log(searchParams);
   return (
@@ -25,7 +31,10 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
       <section className="relative flex flex-col items-center py-10 mt-24">
         <h1 className="text-6xl font-bold font-bebas">Pricing</h1>
         <p className="mt-3 font-light text-md opacity-70 ">
-          ₹1999 off for the first 50 customers (7 left)
+          {/* {searchParams && searchParams.country == "in"? "₹7999":"$100"} 
+          off for the first 3 customers  (7 left) */}
+          We are closing slots for {nextMonthData},{nextMonthYear} (only 3 left)
+          for the current offer. <span className="font-bold">Grab it now!</span>
         </p>
         <div className="flex flex-col justify-center  gap-10 my-10 md:flex-row">
           <div
@@ -36,13 +45,13 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
               <h2 className="mt-2 ">
                 <span className="mr-2 line-through opacity-80">
                   {searchParams && searchParams.country == "in"
-                    ? "₹20999"
-                    : "$499"}
+                    ? "₹69,999"
+                    : "$699"}
                 </span>
                 <span className="mr-1 text-5xl font-bold font-bebas">
                   {searchParams && searchParams.country == "in"
-                    ? "₹16997"
-                    : "$349"}
+                    ? "₹59,977"
+                    : "$599"}
                 </span>
                 <span className="text-sm font-light ">only</span>
               </h2>
@@ -83,13 +92,13 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
               <CardTitle className="mt-2">
                 <span className="mr-2 line-through opacity-80">
                   {searchParams && searchParams.country == "in"
-                    ? "₹37999"
-                    : "$1099"}
+                    ? "₹95,999"
+                    : "$1199"}
                 </span>
                 <span className="mr-1 text-5xl font-bold font-bebas">
                   {searchParams && searchParams.country == "in"
-                    ? "₹27999"
-                    : "$649"}
+                    ? "₹88,999"
+                    : "$1049"}
                 </span>
                 {/* <span className="mr-2 line-through opacity-80"></span>
                 <span className="mr-1 font-bebas text-5xl font-bold">
@@ -115,6 +124,30 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
                 </StyledButton>
               </Link>
             </div>
+          </div>
+        </div>
+        <div
+          className={`flex  flex-col justify-between gap-5 bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950  w-96 md:w-[740px]`}
+        >
+          <div className="py-6">
+            <h4 className="text-4xl leading-3  font-bold font-bebas">
+              Custom requirement
+            </h4>
+            <h2 className="mt-2 opacity-80">
+              We can build exactly what you want! how you want! When you want!
+            </h2>
+          </div>
+          <ul className="flex md:gap-5 gap-2 flex-wrap">
+            <CustomList>Custom design</CustomList>
+            <CustomList>Specific Layouts</CustomList>
+            <CustomList>Startup idea!</CustomList>
+          </ul>
+          <div className="flex flex-col">
+            <Link href={"https://rzp.io/l/EmhRpdi2uB"}>
+              <StyledButton className="w-full">
+                ⚡ Book a call now!{" "}
+              </StyledButton>
+            </Link>
           </div>
         </div>
       </section>

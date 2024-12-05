@@ -44,7 +44,7 @@ const page = async ({ params }: { params: Params }) => {
           {work.tags &&
             work.tags.length > 0 &&
             work.tags.map((tag, i) => (
-              <Badge key={i} variant={"outline"}>
+              <Badge className=" text-white" key={i} variant={"outline"}>
                 {tag}
               </Badge>
             ))}
@@ -99,15 +99,21 @@ const page = async ({ params }: { params: Params }) => {
       )}
       <section className="flex items-center justify-center mt-12">
         <Link href={"https://cal.com/unicorn-space/15min"}>
-          <StyledButton parentClassName="px-0 scale-95" className="px-0">
+          <StyledButton
+            parentClassName="animate-background-shine px-0 scale-95"
+            className="px-0"
+          >
             Book a call
           </StyledButton>
         </Link>
         <div className="flex items-center gap-2">
-          <SvgAssests.ArrowCurved className="rotate-180 ml-4 stroke-1" />
+          <div className="rotate-180">
+            <SvgAssests.ArrowCurved className="animate-shake rotate ml-4 stroke-1" />
+          </div>
           <p className="text-center font-serif text-lg text-balance">
             We get book <br />
-            fast 🔥
+            fast
+            <span className="animate-pulse">🔥</span>
           </p>
         </div>
       </section>
