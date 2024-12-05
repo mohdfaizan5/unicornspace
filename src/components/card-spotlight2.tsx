@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
-import StyledButton from "./other/StyledButton";
+import StyledButton from "./styled-button";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 

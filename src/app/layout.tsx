@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Anton } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Header } from "@/components/Navbar";
+import { Header } from "@/components/navbar";
 import Footer from "@/components/footer";
 import { GoogleTagManager } from "@next/third-parties/google";
 

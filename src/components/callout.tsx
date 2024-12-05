@@ -1,5 +1,5 @@
 import React from "react";
-import StyledButton from "./other/StyledButton";
+import StyledButton from "./styled-button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 

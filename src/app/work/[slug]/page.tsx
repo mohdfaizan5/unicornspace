@@ -1,4 +1,4 @@
-import StyledButton from "@/components/other/StyledButton";
+import StyledButton from "@/components/styled-button";
 import { SvgAssests } from "@/components/svg-assets";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/lib/data";

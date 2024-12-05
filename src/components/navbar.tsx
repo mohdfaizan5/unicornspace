@@ -1,7 +1,7 @@
 import LogoIcon from "@/../public/logo-white-256x256.png";
 import MenuIcon from "@/assets/icon-menu.svg";
 import Link from "next/link";
-import StyledButton from "./other/StyledButton";
+import StyledButton from "./styled-button";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { RiMenu3Fill } from "react-icons/ri";

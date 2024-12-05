@@ -5,7 +5,7 @@ import React from "react";
 import { SvgAssests } from "./svg-assets";
 import { projects } from "@/lib/data";
 import { Button } from "./ui/button";
-import StyledButton from "./other/StyledButton";
+import StyledButton from "./styled-button";
 
 const Projects = ({ viewAll }: { viewAll?: boolean }) => {
   // if (viewAll)
