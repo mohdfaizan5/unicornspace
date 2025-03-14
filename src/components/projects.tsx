@@ -35,20 +35,14 @@ const Projects = ({ viewAll }: { viewAll?: boolean }) => {
             <EachProject data={project} key={project.name} />
           ))}
       </div>
-      {/* {viewAll && (
-        <Button>
-          <Link className="mx-auto " href={"/work"}>
-            View All
-          </Link>
-        </Button>
-      )} */}
+
       {viewAll && (
 
-      <Link href={"/work"} className="mt-10 md:mt-16">
-        <StyledButton className="mx-auto">
-          View All
-        </StyledButton>
-      </Link>
+        <Link href={"/work"} className="mt-10 md:mt-16">
+          <StyledButton className="mx-auto">
+            View All
+          </StyledButton>
+        </Link>
       )}
 
     </section>
@@ -58,25 +52,19 @@ const Projects = ({ viewAll }: { viewAll?: boolean }) => {
 const EachProject = ({ data }: { data: Project }) => {
   const { thumbnail, name, year, tags } = data;
   return (
-    <div className="w-[350px] sm:w-[400px] mx-auto h-[300px] md:w-[500px] md:h-[350px] col-span-5 py-2 overflow-hidden border border-gray-800 shadow-2xl rounded-xl p-3">
-      <div className="relative h-[70%] overflow-hidden">
-        <Image
-          className="overflow-hidden aspect-video blur-3xl rounded-t-md"
-          src={thumbnail}
-          alt={name}
-          width={500}
-          quality={50}
-          height={330}
-        />
-        <Image
-          className="object-cover absolute top-3 left-6 z-10  overflow-x-hidden object-top rounded-md h-[90%] w-[90%]"
-          src={thumbnail}
-          alt={name}
-          width={500}
-          height={330}
-        />
+    <div className="max-w-[390px] sm:w-[400px] mx-auto h-[300px] md:w-[500px] md:max-h-[350px] col-span-5 pb  -2 overflow-hidden border-[0.3px] border-slate-700 shadow-2xl rounded-xl">
+      <div className="relative flex flex-col items-center justify-between max-h-[70%] w-full overflow-hidden rounded-t-md">
+        <Link href={`/work/${data.slug}`} className="mx-auto">
+          <Image
+            className="object-cover overflow-x-hidden object-top rounded-t-md "
+            src={thumbnail}
+            alt={name}
+            width={550}
+            height={380}
+          />
+        </Link>
       </div>
-      <div className="flex justify-between mt-5 bg-black z-10">
+      <div className="flex justify-between mt-5 p-2 bg-black z-10">
         <section className="bg-black">
           <div className="flex items-baseline gap-3">
             <h3 className="text-xl  ml-2">{name}</h3>
@@ -98,7 +86,7 @@ const EachProject = ({ data }: { data: Project }) => {
           )}
         </section>
         <Link href={`/work/${data.slug}`}>
-          <div className="bg-white size-10 flex justify-center items-center rounded-full hover:rotate-12 hover:transition-transform">
+          <div className="bg-white size-10 flex justify-center items-center rounded-full hover:rotate-45 ease-in duration-300 hover:transition-transform">
             <ArrowTopRightIcon className="text-black size-6" />
           </div>
         </Link>

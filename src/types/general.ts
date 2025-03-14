@@ -6,8 +6,12 @@ type Testimonial = {
 
 type ContentItem =
   | { type: "h1"; content: string }
+  | { type: "h2"; content: string }
+  | { type: "h3"; content: string }
   | { type: "p"; content: string }
-  | { type: "image"; src: string; alt?: string };
+  | { type: "techused"; technologies: string[] }
+  | { type: "image"; src: string; alt?: string }
+  | { type: "element"; content: any };
 
 type ContentArray = ContentItem[];
 

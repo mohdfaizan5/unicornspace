@@ -1,4 +1,11 @@
-const pages = ["/socials", "/pricing", "/work"];
+const pages = [
+  "/socials",
+  //  "/pricing",
+  "/work",
+  "/our-tech-stack",
+  "about-us",
+  "/get-started",
+];
 
 import { projects } from "@/lib/data";
 import type { MetadataRoute } from "next";

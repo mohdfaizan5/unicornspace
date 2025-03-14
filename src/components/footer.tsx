@@ -9,6 +9,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { SvgAssests } from "./svg-assets";
+import { Mail } from "lucide-react";
 
 const Footer = () => {
   const data = [
@@ -17,8 +18,8 @@ const Footer = () => {
       links: [
         { title: "Portfolio", link: "/work" },
         { title: "Testimonials", link: "/#testimonials" },
-        { title: "Pricing", link: "/pricing" },
-        { title: "Socials", link: "/socials" },
+        { title: "Our coding standards", link: "/our-tech-stack#code-quality" },
+        { title: "faizan@unicorn-space.com", link: "mailto:faizan@unicorn-space.com" },
       ],
     },
     // {
@@ -55,7 +56,7 @@ const Footer = () => {
           link: "https://ui.unicorn-space.com/",
           target: "_blank",
         },
-        { title: "FreelanceFlow", link: "#" },
+        // { title: "FreelanceFlow", link: "#" },
         // { title: "Privacy", link: "#" },
       ],
     },
@@ -78,21 +79,21 @@ const Footer = () => {
           </p>
           <div className="flex gap-4">
             <Link
-              href="/pricing"
+              href="https://cal.com/unicorn-space/15min"
               className="px-4 py-2 text-sm font-semibold text-black bg-white rounded-lg"
             >
               Get started
             </Link>
           </div>
-          <div className="text-xl flex gap-2 items-center">
+          <div className="text-xl flex gap-4 mt-2 items-center">
             <Link href={"https://www.linkedin.com/company/unicornspace/"}>
-              <FaLinkedin size={18} />
+              <FaLinkedin size={24} />
             </Link>
-            <Link href={"https://x.com/_unicornspace_"}>
-              <FaXTwitter size={18} />
+            <Link href={"mailto:faizan@unicorn-space.com"}>
+              <Mail size={24} />
             </Link>
             <Link href={"https://github.com/mohdfaizan5/unicornspace"}>
-              <FaGithub size={18} />
+              <FaGithub size={24} />
             </Link>
           </div>
         </div>

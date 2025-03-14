@@ -2,6 +2,7 @@ import starsBg from "@/../public/assets/stars.png";
 import gridLines from "@/../public/assets/grid-lines.png";
 import StyledButton from "@/components/styled-button";
 import Link from "next/link";
+
 export const CallToAction = () => {
   return (
     <section className="py-20 md:py-24">
@@ -13,7 +14,7 @@ export const CallToAction = () => {
           }}
         >
           <div
-            className="absolute inset-0 bg-[rgb(240,0,60,0.0)] rounded-xl bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)]"
+            className="absolute opacity-65 inset-0 bg-[rgb(220,12,20,0.0)] rounded-xl bg-blend-overlay [mask-image:radial-gradient(50%_50%_at_50%_35%,black,transparent)]"
             style={{
               backgroundImage: `url(${gridLines.src})`,
               backgroundBlendMode: "exclusion",

@@ -6,7 +6,11 @@
   font-family: bebus;
   src: url("/BebasNeue-Regular.ttf");
 }
-
+/* body {
+  background-image: url("/assets/noise.svg");
+  mask-repeat: repeat;
+  z-index: 100;
+} */
 @layer base {
   :root {
     --background: 0 0% 100%;

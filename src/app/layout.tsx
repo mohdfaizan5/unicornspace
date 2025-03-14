@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID as string} />
 
-      <body className={inter.className + " text-zinc-300"}>
+      <body className={inter.className + " text-zinc-300 antialiased"}>
         <Header />
 
         {/* <ThemeProvider
@@ -42,7 +42,7 @@ export default function RootLayout({
         > */}
         {children}
         {/* </ThemeProvider> */}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

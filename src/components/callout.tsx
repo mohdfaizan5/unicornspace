@@ -12,7 +12,7 @@ const CallOut = () => {
           Book a call and get started on your project today.
           <br /> No BS. Straight to point!.
         </p>
-        <Link href={"/pricing"}>
+        <Link href={"/get-started"}>
           <StyledButton className="flex gap-2 items-center">
             Book a call <ArrowTopRightIcon />
           </StyledButton>

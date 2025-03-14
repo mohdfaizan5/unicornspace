@@ -25,7 +25,7 @@ const testimonials = [
   {
     text: "They treated our business like their own. The results were seeing now prove that choosing them was the best decision we made with our Website + SEO + Ads",
     name: "Azmath Khan",
-    title: "Founder @ WoodDecor",
+    title: "Owner - WoodDecor",
     avatarImg:
       "https://github.com/user-attachments/assets/6162588b-8e33-45c2-aebf-4b8b2280b4a6",
   },
@@ -34,7 +34,7 @@ const testimonials = [
     name: "Ananth Mallya",
     title: "Founder @ QuanTechOrigin",
     avatarImg:
-      "https://media.licdn.com/dms/image/v2/C5603AQEEXgxbKRiR6Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1662395631805?e=1738195200&v=beta&t=q5uPDUrFRCGRhbfNs5-Fj_YdXyPkfXIX5iWP3Lxjgwo",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHQNOGVVX9YOdb-l_pzqur72iTC_POyoYaJw&s",
   },
 ];
 
@@ -46,7 +46,7 @@ export const Testimonials = () => {
           Beyond Expectations.{" "}
           <SvgAssests.Chat className="w-10 absolute right-5 top-0 md:-top-2 md:-right-14" />
         </h2>
-        <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5 max-w-2xl mx-auto">
+        <p className="text-white/70 text-lg  tracking-tight text-center mt-5 max-w-2xl mx-auto">
           Our revolutionary products and services have transformed our clients.
         </p>
         <div className="overflow-hidden mt-10 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
@@ -56,7 +56,7 @@ export const Testimonials = () => {
                 key={testimonial.name}
                 className="border border-white/15 p-6 rounded-xl flex-none bg-[linear-gradient(to_bottom_left,hsl(209,99%,48%,10%),black)] max-w-xs animate-scroll"
               >
-                <div className="text-lg tracking-tight ">
+                <div className="tracking-tight ">
                   {testimonial.text}
                 </div>
                 <div className="flex items-center gap-3 mt-5 ">

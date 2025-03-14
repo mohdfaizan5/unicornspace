@@ -3,28 +3,70 @@ import StyledButton from "./styled-button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { CompaniesCarousal } from "@/components/companies-carousal";
+import CompaniesCarousal from "@/components/companies-carousal";
 import { SvgAssests } from "./svg-assets";
 import { Button } from "./ui/button";
+import { SmoothTextLoop } from "./text-loop";
 
 const HeroSection = () => {
+  const items = [
+    "projects",
+    "SaaS",
+    "products",
+    "businesses",
+  ]
   return (
     <main className="h-[90vh] flex flex-col gap-4 justify-center items-start px-5 md:items-center pb-10 mt-20 sm:mt-10 md:mt-24 relative">
       <div className="absolute mt-[75px]  bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
-      <h1 className="text-[2.8rem]  align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[55px] font-medium capitalize tracking-tighter max-w-[52rem] ">
+      <h1 className="text-[2.8rem]  align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[65px] font-medium capitalize tracking-tighter max-w-[52rem] ">
         Turn your{" "}
         <span className="relative inline-block font-serif md:mr-2 overflow-visible">
           ideas
-          <SvgAssests.ThreeLines className="absolute -top-4  -right-4 stroke-white  text-white fill-red-400" />
+          <SvgAssests.ThreeLines className="hidden md:block absolute -top-4  -right-4 stroke-white  text-white fill-red-400" />
         </span>{" "}
-        into <span className="underline">successful</span> online businesses
+        into <br className="hidden md:block"/><span className="underline">successful</span> {" "}
+        <SmoothTextLoop items={items} interval={2.5} className="text-white -mb-2" />
+        {/* <TextLoop
+          className='overflow-y-clip'
+          transition={{
+            type: 'spring',
+            stiffness: 900,
+            damping: 80,
+            mass: 10,
+          }}
+          variants={{
+            initial: {
+              y: 20,
+              rotateX: 90,
+              opacity: 0,
+              filter: 'blur(4px)',
+            },
+            animate: {
+              y: 0,
+              rotateX: 0,
+              opacity: 1,
+              filter: 'blur(0px)',
+            },
+            exit: {
+              y: -20,
+              rotateX: -90,
+              opacity: 0,
+              filter: 'blur(4px)',
+            },
+          }}
+        >
+          <span>projects</span>
+          <span>SaaS</span>
+          <span>products</span>
+          <span>businesses</span>
+        </TextLoop> */}
         {/* We craft webapps <br className="hidden" /> & brands */}
       </h1>
-      <p className=" text-left opacity-70 text-lg mb-10 max-w-2xl md:text-center">
-        UnicornSpace is a leading agency based in Bangalore. We help startups &
+      <p className=" text-left text-muted-foreground  text-lg mb-10 max-w-2xl md:text-center">
+        UnicornSpace is a tech studio based in Bangalore. We help startups &
         Business owners to grow their business online.
       </p>
-      <Link href={"/pricing"}>
+      <Link href={"https://cal.com/unicorn-space/15min"}>
         <StyledButton
           className="flex justify-start items-center bg-blue-700 gap-1 btn-primary group  "
           parentClassName="mt-0"
@@ -59,6 +101,7 @@ const HeroSection = () => {
       {/* <h1 style={{fontSize: "clamp(3rem, -1.5rem + 8vw, 10rem)"}} className=' font-satori-700'>UnicornSpace</h1> */}
 
       <CompaniesCarousal />
+
     </main>
   );
 };

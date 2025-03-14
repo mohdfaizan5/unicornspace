@@ -31,7 +31,7 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
     <div className="">
       <section className="relative flex flex-col items-center py-10 mt-24">
         <h1 className="text-6xl font-bold font-bebas">Pricing</h1>
-        <p className="mt-3 font-light text-md opacity-70 ">
+        <p className="mt-3 font-light text-md opacity-70 text-center max-w-96 md:max-w-96 ">
           {/* {searchParams && searchParams.country == "in"? "₹7999":"$100"} 
           off for the first 3 customers  (7 left) */}
           We are closing slots for {nextMonthData},{nextMonthYear} (only 3 left)
@@ -42,17 +42,17 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
             className={`flex  flex-col justify-between gap-5 bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950 md:w-80`}
           >
             <div className="py-6">
-              <h4 className="text-xl font-semibold">Basic Plan</h4>
+              <h4 className="text-xl opacity-75 font-semibold">Basic Plan</h4>
               <h2 className="mt-2 ">
                 <span className="mr-2 line-through opacity-80">
                   {searchParams && searchParams.country == "in"
-                    ? "₹69,999"
-                    : "$699"}
+                    ? "₹99,999"
+                    : "$1299"}
                 </span>
                 <span className="mr-1 text-5xl font-bold font-bebas">
                   {searchParams && searchParams.country == "in"
                     ? "₹59,977"
-                    : "$599"}
+                    : "$999"}
                 </span>
                 <span className="text-sm font-light ">only</span>
               </h2>
@@ -69,7 +69,7 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
               </CustomList>
             </ul>
             <div className="flex flex-col mx-auto">
-              <Link href={"https://rzp.io/l/XDtMnw7Oj"}>
+              <Link href={"/get-started"}>
                 <StyledButton>Purchase</StyledButton>
               </Link>
               {/* <p className="mt-2 text-sm text-center opacity-70">
@@ -94,12 +94,12 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
                 <span className="mr-2 line-through opacity-80">
                   {searchParams && searchParams.country == "in"
                     ? "₹95,999"
-                    : "$1199"}
+                    : "$3199"}
                 </span>
                 <span className="mr-1 text-5xl font-bold font-bebas">
                   {searchParams && searchParams.country == "in"
                     ? "₹88,999"
-                    : "$1049"}
+                    : "$2749"}
                 </span>
                 {/* <span className="mr-2 line-through opacity-80"></span>
                 <span className="mr-1 font-bebas text-5xl font-bold">
@@ -111,7 +111,7 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
 
             <CardContent>
               <ul className="space-y-2 text-left text-gray-500 dark:text-gray-400">
-                <CustomList hightLightText={""}>Up to 20 pages</CustomList>
+                <CustomList hightLightText={""}>All pages</CustomList>
                 <CustomList>Responsive design</CustomList>
                 <CustomList>6 months of Free support</CustomList>
                 <CustomList hightLightText={""}>Authentication</CustomList>
@@ -119,7 +119,7 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
               </ul>
             </CardContent>
             <div className="flex flex-col mx-auto">
-              <Link href={"https://rzp.io/l/EmhRpdi2uB"}>
+              <Link href={"/get-started"}>
                 <StyledButton className="w-full">
                   ⚡ Grab this offer now!
                 </StyledButton>
@@ -128,13 +128,13 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
           </div>
         </div>
         <div
-          className={`flex  flex-col justify-between gap-5 bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950  w-96 md:w-[740px]`}
+          className={`flex  flex-col justify-between gap-2 bg-background px-10 py-10 border border-zinc-700 rounded-2xl  bg-gradient-to-r from-black to-gray-950  w-96 md:w-[740px]`}
         >
           <div className="py-6">
             <h4 className="text-4xl leading-3  font-bold font-bebas">
               Custom requirement
             </h4>
-            <h2 className="mt-2 opacity-80">
+            <h2 className="mt-3 text-muted-foreground">
               We can build exactly what you want! how you want! When you want!
             </h2>
           </div>
@@ -143,8 +143,8 @@ const PricingSection = async (props: { searchParams: SearchParams }) => {
             <CustomList>Specific Layouts</CustomList>
             <CustomList>Startup idea!</CustomList>
           </ul>
-          <div className="flex flex-col">
-            <Link href={"https://rzp.io/l/EmhRpdi2uB"}>
+          <div className="flex flex-col mt-2">
+            <Link href={"/get-started"}>
               <StyledButton className="w-full">
                 ⚡ Book a call now!{" "}
               </StyledButton>
