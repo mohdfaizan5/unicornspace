@@ -34,14 +34,14 @@ export default function RootLayout({
       <body className={inter.className + " text-zinc-300 antialiased"}>
         <Header />
 
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
-        > */}
-        {children}
-        {/* </ThemeProvider> */}
+        >
+          {children}
+        </ThemeProvider>
         <Footer />
       </body>
     </html>

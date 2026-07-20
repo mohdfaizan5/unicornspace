@@ -23,23 +23,24 @@ export const Header = () => {
   const springOptions = { bounce: 0.1 };
 
   return (
-    <header className=" py-4 border-b px-  md:px-10 border-white/15 md:border-none fixed w-full top-0 z-40 ">
+    <header className=" py-4 border-b   md:px-10 border-white/15 md:border-none fixed w-full top-0 z-40 ">
       <div className="absolute inset-0 backdrop-blur-xl  -z-10 md:hidden "></div>
       <div className="container">
-        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-xl max-w-2xl mx-auto relative">
+        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-full max-w-2xl mx-auto relative">
           <div className="absolute inset-0 backdrop-blur -z-10 "></div>
-          <div>
+          <div className="pl-4">
             <Link
               href={"/"}
-              className=" h-10 w-10 rounded-lg  justify-center items-center border-white/15 grid place-content-center"
+              className=" h-10 w- flex  rounded-lg  justify-center items-center border-white/15  place-content-center"
             >
               {" "}
               <Image src={LogoIcon.src} width={40} alt="" height={40} />
+              <span className="">Unicorn Space</span>
             </Link>
           </div>
           <div className="md:flex hidden justify-center items-center"></div>
-          <AllLinks className={"hidden md:flex"} />
-          <div className=" flex justify-between items-center ">
+          <AllLinks className={"hidden md:flex mr-12"} />
+          <div className=" flex- hidden justify-between items-center  ">
             <Link href={"https://cal.com/unicorn-space/15min"}>
               <Magnetic
                 intensity={0.2}
@@ -62,23 +63,23 @@ export const Header = () => {
                 </button>
               </Magnetic>
             </Link>
-            <Drawer>
-              <DrawerTrigger className="px-4 py-2 md:hidden block">
+            {/* <Drawer >
+              <DrawerTrigger className="px-4 py-2 hidden!">
                 <RiMenu3Fill size={20} />
               </DrawerTrigger>
               <DrawerContent>
                 <DrawerHeader>
-                  {/* <DrawerTitle>Are you absolutely sure?</DrawerTitle> */}
+                  <DrawerTitle>Are you absolutely sure?</DrawerTitle>
                   <AllLinks className={"flex-col"} />
                 </DrawerHeader>
-                {/* <DrawerFooter>
+                <DrawerFooter>
                   <Button>Submit</Button>
                   <DrawerClose>
                     <Button variant="outline">Cancel</Button>
                   </DrawerClose>
-                </DrawerFooter> */}
+                </DrawerFooter>
               </DrawerContent>
-            </Drawer>
+            </Drawer> */}
           </div>
         </div>
       </div>
@@ -90,22 +91,22 @@ const AllLinks = ({ className }: { className?: ReactNode }) => {
   return (
     <nav
       className={cn(
-        "flex gap-8 items-center justify-center text-white/70 text-sm",
+        "flex gap-4 items-center justify-center text-white/70 text-sm",
         className
       )}
     >
       <Link href={"/#portfolio"} className="hover:text-white">
-        Portfolio
+        /experiments
       </Link>
       <Link href={"/#testimonials"} className="hover:text-white">
-        Testimonials
+        /research
       </Link>
       <Link href={"/our-tech-stack"} className="hover:text-white">
-        Tech Stack
+        /bookmarks
       </Link>
-      <Link href={"/about-us"} className="hover:text-white">
+      {/* <Link href={"/about-us"} className="hover:text-white">
         About Us
-      </Link>
+      </Link> */}
     </nav>
   );
 };

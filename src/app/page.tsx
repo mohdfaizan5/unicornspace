@@ -18,18 +18,23 @@ import OurTechStack from "@/components/our-tech-stack";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import OurServices from "@/components/our-services";
+import { BlurFade } from "@/components/ui/blur-fade";
+import WorkSection from "@/components/work-section";
+import HackathonsSection from "@/components/hackathons-section";
+const BLUR_FADE_DELAY = 0.04;
 
 const page = () => {
   return (
     <>
-      <div className="container pb-10 overflow-x-hidden  font-satori bg-background text-gray-50 w-full "
+      {/* bg-[#EFEDEB]  */}
+      <div className="container noise  pb-10 overflow-x-hidden  font-satori bg-background text-gray-50 w-full "
       // style={{ backgroundImage: `url("./assets/noise.svg")` }}
       >
         <HeroSection />
         {/* <CompaniesCarousal /> */}
 
 
-        <Projects viewAll />
+        {/* <Projects viewAll /> */}
         <section className="min-h-52 px-4 my-10 max-w-6xl mx-auto flex items-center justify-around">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold">
@@ -51,16 +56,31 @@ const page = () => {
             {`Get started • today • UnicornSpace   • `}
           </SpinningText>
         </section>
+        <section id="work" className="max-w-3xl mx-auto">
+          <div className="flex min-h-0 flex-col gap-y-6">
+            <BlurFade delay={BLUR_FADE_DELAY * 5}>
+              <h2 className="text-xl font-bold">Work Experience</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 6}>
+              <WorkSection />
+            </BlurFade>
+          </div>
+        </section>
         <HowWeWork />
-        <OurTechStack />
+        {/* <section id="hackathons">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <HackathonsSection />
+          </BlurFade>
+        </section> */}
+        {/* <OurTechStack /> */}
         {/* <section className="flex flex-col justify-center gap-1 md:flex-row mt-20">
           <CardSpotlight1 />
           <CardSpotlight2 />
         </section> */}
-        <Testimonials />
+        {/* <Testimonials /> */}
 
         <CallToAction />
-        <OurServices className=""/>
+        {/* <OurServices className=""/> */}
         {/* <Features /> */}
         {/* <PricingSection /> */}
         {/* <CallOut /> */}
