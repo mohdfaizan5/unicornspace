@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s - Unicorn Space",
   },
   description:
-    "Turn your ideas into successful online businesses | Unicorn Space",
+    "UnicornSpace is a small software studio based in Bangalore. We build our own products, run experiments, and share what we learn.",
 };
 
 export default function RootLayout({
@@ -28,21 +28,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html className="noise" lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId={process.env.GOOGLE_TAG_MANAGER_ID as string} />
 
-      <body className={inter.className + " text-zinc-300 antialiased"}>
-        <Header />
-
+      <body className={inter.className + " antialiased"}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
-        <Footer />
       </body>
     </html>
   );

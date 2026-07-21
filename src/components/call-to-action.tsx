@@ -21,16 +21,16 @@ export const CallToAction = () => {
             }}
           ></div>
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter mx-auto shadow-md">
-              Ready to work together?
+            <h2 className="text-5xl md:text-6xl font-medium text-center tracking-tighter mx-auto shadow-md text-white">
+              Building something? So are we.
             </h2>
             <p className="text-white/70 text-lg md:text-xl tracking-tight text-center mt-5 max-w-2xl mx-auto">
-              Book a call and get started on your project today. No BS. Straight
-              to point!.
+              We&apos;re always up for a good conversation — about ideas,
+              products, or the occasional project worth doing.
             </p>
             <div className="flex items-center justify-center mt-12">
               <Link href={"https://cal.com/unicorn-space/15min"}>
-              <StyledButton>Book a call.</StyledButton>
+              <StyledButton>Say hello.</StyledButton>
               </Link>
             </div>
           </div>

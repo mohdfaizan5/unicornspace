@@ -10,6 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { SvgAssests } from "./svg-assets";
 import { Mail } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
 
 const Footer = () => {
   const data = [
@@ -19,7 +20,10 @@ const Footer = () => {
         { title: "Portfolio", link: "/work" },
         { title: "Testimonials", link: "/#testimonials" },
         { title: "Our coding standards", link: "/our-tech-stack#code-quality" },
-        { title: "faizan@unicorn-space.com", link: "mailto:faizan@unicorn-space.com" },
+        {
+          title: "faizan@unicorn-space.com",
+          link: "mailto:faizan@unicorn-space.com",
+        },
       ],
     },
     // {
@@ -62,30 +66,27 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="flex flex-col items-center">
-      <section
-        className="flex flex-wrap items-center justify-between w-full p-6 md:px-20 mt-10 footer gap-7 grow"
-        style={{ borderTop: "1px solid #ffffff20" }}
-      >
+    <footer className="flex flex-col max-w-4xl mx-auto items-center">
+      <section className="flex flex-wrap items-center justify-between w-full p-6 md:px-20 mt-10 footer gap-7 grow border-t border-border">
         <div className="flex flex-col gap-3 footer-section1">
           <div className="flex items-center">
             <SvgAssests.logo />
-            <h3 className="text-[20px] font-semibold text-white">
+            <h3 className="text-[20px] font-semibold text-foreground">
               UnicornSpace
             </h3>
           </div>
-          <p className="text-sm text-white opacity-75">
+          {/* <p className="text-sm text-foreground opacity-75">
             Get started with our product and start building your project.
-          </p>
+          </p> */}
           <div className="flex gap-4">
             <Link
               href="https://cal.com/unicorn-space/15min"
-              className="px-4 py-2 text-sm font-semibold text-black bg-white rounded-lg"
+              className="px-4 py-2 text-sm font-semibold text-primary-foreground bg-primary rounded-lg"
             >
               Get started
             </Link>
           </div>
-          <div className="text-xl flex gap-4 mt-2 items-center">
+          <div className="text-xl flex gap-4 mt-2 items-center text-foreground">
             <Link href={"https://www.linkedin.com/company/unicornspace/"}>
               <FaLinkedin size={24} />
             </Link>
@@ -95,14 +96,12 @@ const Footer = () => {
             <Link href={"https://github.com/mohdfaizan5/unicornspace"}>
               <FaGithub size={24} />
             </Link>
+            <ThemeToggle />
           </div>
         </div>
         <div className="flex gap-6 flex-wrap">
           {data.map((item, i) => (
-            <ul
-              key={i}
-              className="flex flex-col gap-2 text-sm list-none"
-            >
+            <ul key={i} className="flex flex-col gap-2 text-sm list-none">
               <p className="font-bold">{item.title}</p>
               {item.links.map((link, index) => (
                 <li
@@ -122,11 +121,11 @@ const Footer = () => {
           ))}
         </div>
       </section>
-      <div className="mb-2">
+      {/* <div className="flex items-center gap-4 mb-2">
         <p className="text-sm text-foreground font-light">
           © 2021 UnicornSpace. All rights reserved
         </p>
-      </div>
+      </div> */}
     </footer>
   );
 };

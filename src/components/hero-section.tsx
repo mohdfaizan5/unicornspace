@@ -10,22 +10,21 @@ import { SmoothTextLoop } from "./text-loop";
 
 const HeroSection = () => {
   const items = [
-    "projects",
-    "SaaS",
     "products",
-    "businesses",
+    "tools",
+    "SaaS",
+    "side-projects",
   ]
   return (
     <main className="h-[90vh] flex flex-col gap-4 justify-center items-start px-5 md:items-center pb-10 mt-20 sm:mt-10 md:mt-24 relative">
       <div className="absolute mt-[75px]  bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
       <h1 className="text-[2.8rem]  align-middle pt-28  selection:bg-primary/40 leading-none group hover:select-text z-10 md:text-center md:text-[65px] font-medium capitalize tracking-tighter max-w-[52rem] ">
-        Turn your{" "}
+        We{" "}
         <span className="relative inline-block font-serif md:mr-2 overflow-visible">
-          ideas
-          <SvgAssests.ThreeLines className="hidden md:block absolute -top-4  -right-4 stroke-white  text-white fill-red-400" />
+          build
+          <SvgAssests.ThreeLines className="hidden md:block absolute -top-4  -right-4 stroke-foreground  text-foreground fill-red-400" />
         </span>{" "}
-        into <br className="hidden md:block"/><span className="underline">successful</span> {" "}
-        <SmoothTextLoop items={items} interval={2.5} className="text-white -mb-2" />
+        <SmoothTextLoop items={items} interval={2.5} className="text-foreground -mb-2" />
         {/* <TextLoop
           className='overflow-y-clip'
           transition={{
@@ -63,15 +62,15 @@ const HeroSection = () => {
         {/* We craft webapps <br className="hidden" /> & brands */}
       </h1>
       <p className=" text-left text-muted-foreground  text-lg mb-10 max-w-2xl md:text-center">
-        UnicornSpace is a tech studio based in Bangalore. We help startups &
-        Business owners to grow their business online.
+        UnicornSpace is a small software studio based in Bangalore. We ship our
+        own products, run experiments, and share what we learn along the way.
       </p>
-      <Link href={"https://cal.com/unicorn-space/15min"}>
+      <Link href={"/experiments"}>
         <StyledButton
           className="flex justify-start items-center bg-blue-700 gap-1 btn-primary group  "
           parentClassName="mt-0"
         >
-          GetStarted{" "}
+          See what we&apos;re building{" "}
           <ArrowTopRightIcon className="group-hover:translate-x-px " />
         </StyledButton>
       </Link>

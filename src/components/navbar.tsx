@@ -1,4 +1,5 @@
-import LogoIcon from "@/../public/logo-white-256x256.png";
+import LogoWhite from "@/../public/logo-white-256x256.png";
+import LogoBlack from "@/../public/logo-black-256x256.png";
 import MenuIcon from "@/assets/icon-menu.svg";
 import Link from "next/link";
 import StyledButton from "./styled-button";
@@ -23,19 +24,32 @@ export const Header = () => {
   const springOptions = { bounce: 0.1 };
 
   return (
-    <header className=" py-4 border-b   md:px-10 border-white/15 md:border-none fixed w-full top-0 z-40 ">
+    <header className=" py-4 border-b   md:px-10 border-foreground/15 md:border-none fixed w-full top-0 z-40 ">
       <div className="absolute inset-0 backdrop-blur-xl  -z-10 md:hidden "></div>
       <div className="container">
-        <div className="flex justify-between items-center md:border border-white/15 md:p-2.5 rounded-full max-w-2xl mx-auto relative">
+        <div className="flex justify-between items-center md:border border-foreground/15 md:p-2.5 rounded-full max-w-2xl mx-auto relative">
           <div className="absolute inset-0 backdrop-blur -z-10 "></div>
           <div className="pl-4">
             <Link
               href={"/"}
-              className=" h-10 w- flex  rounded-lg  justify-center items-center border-white/15  place-content-center"
+              className=" h-10 w- flex  rounded-lg  justify-center items-center border-foreground/15  place-content-center"
             >
               {" "}
-              <Image src={LogoIcon.src} width={40} alt="" height={40} />
-              <span className="">Unicorn Space</span>
+              <Image
+                src={LogoBlack.src}
+                width={40}
+                alt=""
+                height={40}
+                className="block dark:hidden"
+              />
+              <Image
+                src={LogoWhite.src}
+                width={40}
+                alt=""
+                height={40}
+                className="hidden dark:block"
+              />
+              <span className="text-foreground">Unicorn Space</span>
             </Link>
           </div>
           <div className="md:flex hidden justify-center items-center"></div>
@@ -91,17 +105,17 @@ const AllLinks = ({ className }: { className?: ReactNode }) => {
   return (
     <nav
       className={cn(
-        "flex gap-4 items-center justify-center text-white/70 text-sm",
+        "flex gap-4 items-center justify-center text-foreground/70 text-sm",
         className
       )}
     >
-      <Link href={"/#portfolio"} className="hover:text-white">
+      <Link href={"/experiments"} className="hover:text-foreground">
         /experiments
       </Link>
-      <Link href={"/#testimonials"} className="hover:text-white">
+      <Link href={"/research"} className="hover:text-foreground">
         /research
       </Link>
-      <Link href={"/our-tech-stack"} className="hover:text-white">
+      <Link href={"/our-tech-stack"} className="hover:text-foreground">
         /bookmarks
       </Link>
       {/* <Link href={"/about-us"} className="hover:text-white">

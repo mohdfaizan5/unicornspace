@@ -20,14 +20,13 @@ import Link from "next/link";
 import OurServices from "@/components/our-services";
 import { BlurFade } from "@/components/ui/blur-fade";
 import WorkSection from "@/components/work-section";
-import HackathonsSection from "@/components/hackathons-section";
 const BLUR_FADE_DELAY = 0.04;
 
 const page = () => {
   return (
     <>
       {/* bg-[#EFEDEB]  */}
-      <div className="container noise  pb-10 overflow-x-hidden  font-satori bg-background text-gray-50 w-full "
+      <div className="container   pb-10 overflow-x-hidden  font-satori bg-background text-foreground w-full "
       // style={{ backgroundImage: `url("./assets/noise.svg")` }}
       >
         <HeroSection />
@@ -35,17 +34,18 @@ const page = () => {
 
 
         {/* <Projects viewAll /> */}
-        <section className="min-h-52 px-4 my-10 max-w-6xl mx-auto flex items-center justify-around">
+        <section className="min-h-52 px-4 my-10 max-w-3xl mx-auto flex items-center justify-around">
           <div className="space-y-2">
             <h2 className="text-2xl font-bold">
-              Looking to start a creative project?
-              {/* Have an idea? */}
+              We&apos;re a studio, not an agency.
             </h2>
-            <p className="text-sm max-w-80  md:max-w-96 mb-2 text-muted-foreground">{"We'd"} love to help you out. Get in touch with
-              us and {"let's"} start something great together.
+            <p className="text-sm max-w-80  md:max-w-96 mb-2 text-muted-foreground">
+              We spend most of our time building our own products. Some grow up,
+              some quietly teach us something. Either way, we build in the
+              open — from Bangalore, on our own terms.
             </p>
-            <Link href="https://cal.com/unicorn-space/15min" className="mt-2 block">
-              <Button variant={"secondary"} className=''>Let us talk. {" ->"}</Button>
+            <Link href="/research" className="mt-2 block">
+              <Button variant={"secondary"} className=''>Read our notes {" ->"}</Button>
             </Link>
           </div>
           <SpinningText
@@ -53,10 +53,10 @@ const page = () => {
             fontSize={1.2}
             className='hidden md:block font-medium leading-none'
           >
-            {`Get started • today • UnicornSpace   • `}
+            {`Bangalore • est. 2021 • UnicornSpace • `}
           </SpinningText>
         </section>
-        <section id="work" className="max-w-3xl mx-auto">
+        {/* <section id="work" className="max-w-3xl mx-auto">
           <div className="flex min-h-0 flex-col gap-y-6">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
               <h2 className="text-xl font-bold">Work Experience</h2>
@@ -65,7 +65,7 @@ const page = () => {
               <WorkSection />
             </BlurFade>
           </div>
-        </section>
+        </section> */}
         <HowWeWork />
         {/* <section id="hackathons">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>

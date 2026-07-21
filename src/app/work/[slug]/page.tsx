@@ -89,7 +89,7 @@ const page = async ({ params }: { params: Params }) => {
             {work.tags &&
               work.tags.length > 0 &&
               work.tags.map((tag, i) => (
-                <Badge className=" text-white" key={i} variant={"outline"}>
+                <Badge className=" text-foreground" key={i} variant={"outline"}>
                   {tag}
                 </Badge>
               ))}

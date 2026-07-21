@@ -56,7 +56,7 @@ const page = () => {
           </div>
 
           <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
-            <i className="text-4xl text-white"><RiNextjsFill /></i>
+            <i className="text-4xl text-foreground"><RiNextjsFill /></i>
             <div>
               <h3 className="text-xl font-semibold">Next.js</h3>
               <p className="text-gray-600">SEO-friendly, server-rendered web applications with fast performance.</p>
@@ -106,7 +106,7 @@ const page = () => {
           </div>
 
           <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
-            <i className="text-4xl text-white"><SiKotlin /></i>
+            <i className="text-4xl text-foreground"><SiKotlin /></i>
             <div>
               <h3 className="text-xl font-semibold">Kotlin</h3>
               <p className="text-gray-600"> Kotlin has increased our productivity and help focus focus on innovation!</p>
@@ -114,7 +114,7 @@ const page = () => {
           </div>
 {/* 
           <div className="p-6  rounded-xl shadow-md flex items-center space-x-4">
-            <i className="text-4xl text-white"><IoLogoVercel /></i>
+            <i className="text-4xl text-foreground"><IoLogoVercel /></i>
             <div>
               <h3 className="text-xl font-semibold">Vercel</h3>
               <p className="text-gray-600">Lightning-fast, serverless deployment with global reach.</p>

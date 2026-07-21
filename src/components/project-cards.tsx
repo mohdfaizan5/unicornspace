@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
 // Define the Project type for the array of projects
@@ -14,7 +14,7 @@ type Project = {
 };
 
 // Define initial offset and angle variants for the deck effect
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -23,7 +23,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     y: -40,
     x: -40,

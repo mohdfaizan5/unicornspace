@@ -1,12 +1,55 @@
-import { allPosts } from "content-collections";
 import { formatDate } from "@/lib/utils";
-import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { MDXContent } from "@content-collections/mdx/react";
-import { mdxComponents } from "@/mdx-components";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const DATA = {
+  url: "https://example.com",
+  name: "Unicorn Space",
+};
+
+type Post = {
+  title: string;
+  publishedAt: string;
+  summary: string;
+  image?: string;
+  mdx: string;
+  _meta: { path: string };
+};
+
+const allPosts: Post[] = [
+  {
+    title: "Sample Research Post",
+    publishedAt: "2025-01-01",
+    summary: "Placeholder research content for the only available post.",
+    mdx: `# Sample Research Post
+
+## What to test (a simple rule)
+* Unit tests: small, fast checks for logic and pure functions.
+* Integration tests: components + data + user flows (most value per test).
+* E2E tests: a few happy-path checks across the whole app.
+
+## High-signal testing habits
+* Prefer user-facing assertions (what the user sees/does).
+* Use accessible queries first (roles, labels).
+* Mock at the boundary (network) instead of mocking implementation details.
+
+## Things to avoid
+* Testing internal component state when behavior is what matters.
+* Sprinkling test IDs everywhere as a first choice.
+* Overusing snapshots that fail for harmless UI changes.
+
+## Wrap-up
+Start small: one integration test for your most important flow, then add unit tests for tricky logic. Over time, your tests become living documentation that helps you move faster.
+
+This is placeholder content for research.
+
+- One item
+- Another item`,
+    _meta: { path: "sample-research-post.mdx" },
+  },
+];
 
 function getSortedPosts() {
   return [...allPosts].sort((a, b) => {
@@ -52,7 +95,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `${DATA.url}/blog/${slug}`,
+      url: `${DATA.url}/research/${slug}`,
       ...(image && {
         images: [
           {
@@ -105,16 +148,42 @@ export default async function Blog({
     description: post.summary,
     image: post.image
       ? `${DATA.url}${post.image}`
-      : `${DATA.url}/blog/${slug}/opengraph-image`,
-    url: `${DATA.url}/blog/${slug}`,
+      : `${DATA.url}/research/${slug}/opengraph-image`,
+    url: `${DATA.url}/research/${slug}`,
     author: {
       "@type": "Person",
       name: DATA.name,
     },
   }).replace(/</g, "\\u003c");
 
+  const content = post.mdx.trim().split(/\n\n+/).map((block, index) => {
+    if (block.startsWith("# ")) {
+      return (
+        <h2 key={index} className="text-2xl font-semibold text-foreground">
+          {block.replace(/^#\s+/, "")}
+        </h2>
+      );
+    }
+
+    if (block.startsWith("- ")) {
+      return (
+        <ul key={index} className="list-disc pl-6">
+          {block.split("\n").map((item, itemIndex) => (
+            <li key={itemIndex}>{item.replace(/^-\s+/, "")}</li>
+          ))}
+        </ul>
+      );
+    }
+
+    return (
+      <p key={index} className="text-muted-foreground">
+        {block}
+      </p>
+    );
+  });
+
   return (
-    <section id="blog">
+    <section id="blog" className="mx-auto max-w-2xl mt-32">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -123,9 +192,9 @@ export default async function Blog({
         }}
       />
       <div className="flex justify-start gap-4 items-center">
-        <Link href="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to Blog">
+        <Link href="/research" className="text-sm text-muted-foreground hover:text-foreground transition-colors border border-border rounded-lg px-2 py-1 inline-flex items-center gap-1 mb-6 group" aria-label="Back to research">
           <ChevronLeft className="size-3 group-hover:-translate-x-px transition-transform" />
-          Back to Blog
+          Back to research
         </Link>
       </div>
       <div className="flex flex-col gap-4">
@@ -148,14 +217,14 @@ export default async function Blog({
         />
       </div>
       <article className="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-        <MDXContent code={post.mdx} components={mdxComponents} />
+        {content}
       </article>
 
       <nav className="mt-12 pt-8 max-w-2xl">
         <div className="flex flex-col sm:flex-row justify-between gap-4">
           {previousPost ? (
             <Link
-              href={`/blog/${getSlug(previousPost)}`}
+              href={`/research/${getSlug(previousPost)}`}
               className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors"
             >
               <span className="flex items-center gap-1 text-xs text-muted-foreground">
@@ -172,7 +241,7 @@ export default async function Blog({
 
           {nextPost ? (
             <Link
-              href={`/blog/${getSlug(nextPost)}`}
+              href={`/research/${getSlug(nextPost)}`}
               className="group flex-1 flex flex-col gap-1 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors text-right"
             >
               <span className="flex items-center justify-end gap-1 text-xs text-muted-foreground">
